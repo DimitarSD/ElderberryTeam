@@ -1,12 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TeamElderberryProject
+﻿namespace TeamElderberryProject
 {
-    struct TransactionData
+    using System;
+
+    public struct TransactionData
     {
+        private decimal amount;
+        private DateTime date;
+
+        public TransactionData(decimal amount, DateTime date)
+            : this()
+        {
+            this.Amount = amount;
+            this.Date = date;
+        }
+
+        public decimal Amount
+        {
+            get
+            {
+                return this.amount;
+            }
+            private set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentOutOfRangeException("Amount cannot be negative number");
+                }
+
+                this.amount = value;
+            }
+        }
+
+        public DateTime Date
+        {
+            get
+            {
+                return this.date;
+            }
+            private set
+            {
+                this.date = value;
+            }
+        }
     }
 }
