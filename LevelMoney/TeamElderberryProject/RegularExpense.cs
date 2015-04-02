@@ -8,5 +8,10 @@ namespace TeamElderberryProject
 {
     public class RegularExpense : Expense
     {
+        public RegularExpense(string name, TransactionType transactionType)
+            : base(name, TransactionType.Expense)
+        {
+
+        }
     }
 }

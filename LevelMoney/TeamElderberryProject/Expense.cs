@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace TeamElderberryProject
 {
-    public class Expense: Transaction, IExpense
+    public abstract class Expense: Transaction, IExpense
     {
+        public Expense(string name, TransactionType transactionType)
+            : base(name, TransactionType.Expense)
+        {
 
+        }
     }
 }

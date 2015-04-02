@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TeamElderberryProject
 {
-    public interface Iincome
+    public interface IIncome
     {
         string ToString();
     }

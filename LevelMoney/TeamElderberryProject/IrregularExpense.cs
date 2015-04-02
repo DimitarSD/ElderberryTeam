@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace TeamElderberryProject
 {
-    public class IrregularExpense
+    public class IrregularExpense: Expense
     {
+        public IrregularExpense(string name, TransactionType transactionType)
+            : base(name, TransactionType.Expense)
+        {
+
+        }
     }
 }
