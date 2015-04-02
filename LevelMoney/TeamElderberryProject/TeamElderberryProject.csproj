@@ -49,7 +49,7 @@
     <Compile Include="Expense.cs" />
     <Compile Include="ExportInFile.cs" />
     <Compile Include="IExpense.cs" />
-    <Compile Include="Iincome.cs" />
+    <Compile Include="IIncome.cs" />
     <Compile Include="ImportFromFile.cs" />
     <Compile Include="Income.cs" />
     <Compile Include="IrregularExpense.cs" />

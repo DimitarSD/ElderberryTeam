@@ -10,7 +10,8 @@ namespace TeamElderberryProject
         string Name { get; set; }
         string TransactionID { get; set; }
         decimal Amount { get; set; }
-        TransactionType TransactionType { get; private set; }
+        TransactionType TransactionType { get; }
+        DateTime DateTime { get; }
         string ToString();
     }
 }

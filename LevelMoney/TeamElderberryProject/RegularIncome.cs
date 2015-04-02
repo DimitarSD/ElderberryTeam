@@ -8,5 +8,10 @@ namespace TeamElderberryProject
 {
     public class RegularIncome : Income
     {
+        public RegularIncome(string name, TransactionType transactionType)
+            : base(name, TransactionType.Income)
+        {
+
+        }
     }
 }
