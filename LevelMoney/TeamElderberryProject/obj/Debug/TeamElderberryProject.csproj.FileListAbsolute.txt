@@ -1,0 +1,6 @@
+C:\Users\Reni\Desktop\Elderbery\LevelMoney\TeamElderberryProject\obj\Debug\TeamElderberryProject.csprojResolveAssemblyReference.cache
+C:\Users\Reni\Desktop\Elderbery\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.dll.config
+C:\Users\Reni\Desktop\Elderbery\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.dll
+C:\Users\Reni\Desktop\Elderbery\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.pdb
+C:\Users\Reni\Desktop\Elderbery\LevelMoney\TeamElderberryProject\obj\Debug\TeamElderberryProject.dll
+C:\Users\Reni\Desktop\Elderbery\LevelMoney\TeamElderberryProject\obj\Debug\TeamElderberryProject.pdb

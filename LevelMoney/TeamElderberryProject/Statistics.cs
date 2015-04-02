@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeamElderberryProject
+namespace TeamElderberryProject.Interfaces
 {
-    public class Statistics
+    public static class Statistics
     {
+        //public static void IncomeFlow(int days, List<Transaction> transactions)
+        //{
+        //    var transactionsStat = transactions.Any(t => t.TransactionType == TransactionType.Income && t.DateTime == (DateTime.Now )));
+        //}
     }
 }

@@ -4,35 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeamElderberryProject
+namespace TeamElderberryProject.Interfaces
 {
     public abstract class Transaction : ITransaction
     {
         private const int IdLength = 10;
         private const string IdChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "123456789";
+        private List<Transaction> transactions;
 
         static readonly Random random = new Random();// to generate ID
 
-        private string name;
+        private string description;
         private string transactionID;
         private decimal amount;
         private DateTime datetime;
 
-        protected Transaction(string name, TransactionType transactionType)
+        protected Transaction(string description, TransactionType transactionType)
         {
-            this.Name = name;
+            this.Description = description;
             this.TransactionType = transactionType;
             this.TransactionID = Transaction.GenerateTransactionID();
             this.DateTime = datetime;
-
+            this.transactions = new List<Transaction>();
         }
         public TransactionType TransactionType { get; private set; } // type: income or expense
 
-        public string Name
+        public string Description
         {
             get
             {
-                return this.name;
+                return this.description;
             }
             set
             {
@@ -44,7 +45,7 @@ namespace TeamElderberryProject
                 {
                     throw new ArgumentOutOfRangeException("Please provide valid name");
                 }
-                this.name = value;
+                this.description = value;
             }
         }
 
@@ -122,5 +123,16 @@ namespace TeamElderberryProject
             return this.TransactionID.Equals((obj as Transaction).TransactionID);
         }
 
+
+
+        public virtual void AddTransaction(Transaction transaction)
+        {
+            this.transactions.Add(transaction);
+        }
+
+        public ICollection<Transaction> Transactions
+        {
+            get { return new List<Transaction>(this.transactions); }
+        }
     }
 }

@@ -48,13 +48,14 @@
     <Compile Include="Exceptions.cs" />
     <Compile Include="Expense.cs" />
     <Compile Include="ExportInFile.cs" />
-    <Compile Include="IExpense.cs" />
-    <Compile Include="IIncome.cs" />
+    <Compile Include="Interfaces\IAccount.cs" />
+    <Compile Include="Interfaces\IExpense.cs" />
+    <Compile Include="Interfaces\IIncome.cs" />
     <Compile Include="ImportFromFile.cs" />
     <Compile Include="Income.cs" />
+    <Compile Include="Interfaces\ITransaction.cs" />
     <Compile Include="IrregularExpense.cs" />
     <Compile Include="IrregularIncome.cs" />
-    <Compile Include="ITransactional.cs" />
     <Compile Include="RegularExpense.cs" />
     <Compile Include="RegularIncome.cs" />
     <Compile Include="Statistics.cs" />
@@ -66,7 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="LevelMoney.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
