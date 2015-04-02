@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace TeamElderberryProject
 {
-    public class Expense: Transaction, IExpense
+    public enum TransactionType
     {
-
+        Income,
+        Expense,
     }
 }
