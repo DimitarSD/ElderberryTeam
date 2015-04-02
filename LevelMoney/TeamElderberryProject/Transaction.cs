@@ -55,7 +55,7 @@ namespace TeamElderberryProject
             {
                 if (value.Length != 10)
                 {
-                    throw new ArgumentOutOfRangeException("ID should be exact 10 sybbols!");
+                    throw new ArgumentOutOfRangeException("ID should be exact 10 symbols!");
                 }
                 this.transactionID = value;
             }
