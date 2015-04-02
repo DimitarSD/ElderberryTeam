@@ -4,3 +4,8 @@ C:\Users\Reni\Desktop\Elderbery\LevelMoney\TeamElderberryProject\bin\Debug\TeamE
 C:\Users\Reni\Desktop\Elderbery\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.pdb
 C:\Users\Reni\Desktop\Elderbery\LevelMoney\TeamElderberryProject\obj\Debug\TeamElderberryProject.dll
 C:\Users\Reni\Desktop\Elderbery\LevelMoney\TeamElderberryProject\obj\Debug\TeamElderberryProject.pdb
+M:\GitHub\ElderberryTeam\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.dll.config
+M:\GitHub\ElderberryTeam\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.dll
+M:\GitHub\ElderberryTeam\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.pdb
+M:\GitHub\ElderberryTeam\LevelMoney\TeamElderberryProject\obj\Debug\TeamElderberryProject.dll
+M:\GitHub\ElderberryTeam\LevelMoney\TeamElderberryProject\obj\Debug\TeamElderberryProject.pdb

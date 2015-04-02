@@ -39,11 +39,13 @@ namespace TeamElderberryProject.Interfaces
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException("Please provide valid name");
+                    //throw new ArgumentNullException("Please provide valid name");
+                    throw new InputException("Please provide valid name", new ArgumentNullException());
                 }
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentOutOfRangeException("Please provide valid name");
+                    //throw new ArgumentOutOfRangeException("Please provide valid name");
+                    throw new InputException("Please provide valid name", new ArgumentOutOfRangeException());
                 }
                 this.description = value;
             }
@@ -56,7 +58,8 @@ namespace TeamElderberryProject.Interfaces
             {
                 if (value.Length != 10)
                 {
-                    throw new ArgumentOutOfRangeException("ID should be exact 10 symbols!");
+                    //throw new ArgumentOutOfRangeException("ID should be exact 10 symbols!");
+                    throw new InputException("ID should be exact 10 symbols!", new ArgumentOutOfRangeException());
                 }
                 this.transactionID = value;
             }
@@ -72,7 +75,8 @@ namespace TeamElderberryProject.Interfaces
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("Please provide positive amount");
+                    //throw new ArgumentOutOfRangeException("Please provide positive amount");
+                    throw new InputException("Please provide positive amount!", new ArgumentOutOfRangeException());
                 }
 
                 this.amount = value;
