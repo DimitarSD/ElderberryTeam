@@ -3,6 +3,8 @@
     using System.IO;
     using System.Text;
 
+    using TeamElderberryProject.Interfaces;
+
     public class ExportInFile : TextFiles
     {
         private const string SaveExpenseDataStringFormat = "Type of expense: {0}";
@@ -10,10 +12,10 @@
 
         public static void SaveExpenseData(Expense currentExpense)
         {
-            StreamWriter writeExpenseData = new StreamWriter();
-            StringBuilder dataToString = new StringBuilder(this.ToString());
+            StreamWriter writeExpenseData = new StreamWriter(); // TO DO
+            StringBuilder dataToString = new StringBuilder();
 
-            dataToString.Append(string.Format(SaveExpenseDataStringFormat, )); // TO DO
+            dataToString.Append(""); // TO DO
 
             using (writeExpenseData)
             {
@@ -23,10 +25,10 @@
 
         public static void SaveIncomeData(Income currentIncome)
         {
-            StreamWriter writeIncomeData = new StreamWriter();
-            StringBuilder dataToString = new StringBuilder(this.ToString());
+            StreamWriter writeIncomeData = new StreamWriter(); // TO DO
+            StringBuilder dataToString = new StringBuilder();
 
-            dataToString.Append(string.Format(SaveIncomeDataStringFormat, )); // TO DO
+            dataToString.Append(""); // TO DO
 
             using (writeIncomeData)
             {

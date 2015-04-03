@@ -15,3 +15,5 @@ C:\Users\adrian\OneDrive\Telerik\OOP\ElderberryTeam\LevelMoney\TeamElderberryPro
 C:\Users\adrian\OneDrive\Telerik\OOP\ElderberryTeam\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.dll.config
 C:\Users\adrian\OneDrive\Telerik\OOP\ElderberryTeam\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.dll
 C:\Users\adrian\OneDrive\Telerik\OOP\ElderberryTeam\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.pdb
+C:\Users\asus\Desktop\App\LevelMoney\TeamElderberryProject\obj\Debug\TeamElderberryProject.csprojResolveAssemblyReference.cache
+C:\Users\asus\Desktop\App\LevelMoney\TeamElderberryProject\obj\Debug\TeamElderberryProject.dll

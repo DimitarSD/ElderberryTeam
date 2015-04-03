@@ -1,8 +1,10 @@
-﻿namespace TeamElderberryProject.Interfaces
+﻿namespace TeamElderberryProject
 {
     using System;
     using System.Collections.Generic;
     using System.Text;
+
+    using TeamElderberryProject.Interfaces;
 
     public abstract class Transaction : ITransaction
     {
