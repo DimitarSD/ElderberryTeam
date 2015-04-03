@@ -1,4 +1,4 @@
-﻿namespace TeamElderberryProject.Interfaces
+﻿namespace TeamElderberryProject
 {
     public class IrregularIncome : Income
     {
