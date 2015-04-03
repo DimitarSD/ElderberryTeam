@@ -24,7 +24,8 @@
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("Amount cannot be negative number");
+                    //throw new ArgumentOutOfRangeException("Amount cannot be negative number");
+                    throw new InputException("Amount cannot be negative number!", new ArgumentOutOfRangeException());
                 }
 
                 this.amount = value;

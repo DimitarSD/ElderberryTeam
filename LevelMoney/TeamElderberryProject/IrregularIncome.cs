@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TeamElderberryProject
+﻿namespace TeamElderberryProject.Interfaces
 {
     public class IrregularIncome : Income
     {
-        public IrregularIncome(string name, TransactionType transactionType)
-            : base(name, TransactionType.Income)
+        public IrregularIncome(TransactionData data, string description, TransactionType transactionType)
+            : base(data, description, TransactionType.Income)
         {
-
         }
     }
 }

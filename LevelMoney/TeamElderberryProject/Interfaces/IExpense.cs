@@ -1,6 +1,6 @@
 ﻿namespace TeamElderberryProject.Interfaces
 {
-    public static class Statistics
+    public interface IExpense
     {
     }
 }

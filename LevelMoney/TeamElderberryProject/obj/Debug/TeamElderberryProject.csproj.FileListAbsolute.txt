@@ -1,0 +1,17 @@
+C:\Users\Reni\Desktop\Elderbery\LevelMoney\TeamElderberryProject\obj\Debug\TeamElderberryProject.csprojResolveAssemblyReference.cache
+C:\Users\Reni\Desktop\Elderbery\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.dll.config
+C:\Users\Reni\Desktop\Elderbery\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.dll
+C:\Users\Reni\Desktop\Elderbery\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.pdb
+C:\Users\Reni\Desktop\Elderbery\LevelMoney\TeamElderberryProject\obj\Debug\TeamElderberryProject.dll
+C:\Users\Reni\Desktop\Elderbery\LevelMoney\TeamElderberryProject\obj\Debug\TeamElderberryProject.pdb
+M:\GitHub\ElderberryTeam\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.dll.config
+M:\GitHub\ElderberryTeam\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.dll
+M:\GitHub\ElderberryTeam\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.pdb
+M:\GitHub\ElderberryTeam\LevelMoney\TeamElderberryProject\obj\Debug\TeamElderberryProject.dll
+M:\GitHub\ElderberryTeam\LevelMoney\TeamElderberryProject\obj\Debug\TeamElderberryProject.pdb
+C:\Users\adrian\OneDrive\Telerik\OOP\ElderberryTeam\LevelMoney\TeamElderberryProject\obj\Debug\TeamElderberryProject.csprojResolveAssemblyReference.cache
+C:\Users\adrian\OneDrive\Telerik\OOP\ElderberryTeam\LevelMoney\TeamElderberryProject\obj\Debug\TeamElderberryProject.dll
+C:\Users\adrian\OneDrive\Telerik\OOP\ElderberryTeam\LevelMoney\TeamElderberryProject\obj\Debug\TeamElderberryProject.pdb
+C:\Users\adrian\OneDrive\Telerik\OOP\ElderberryTeam\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.dll.config
+C:\Users\adrian\OneDrive\Telerik\OOP\ElderberryTeam\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.dll
+C:\Users\adrian\OneDrive\Telerik\OOP\ElderberryTeam\LevelMoney\TeamElderberryProject\bin\Debug\TeamElderberryProject.pdb

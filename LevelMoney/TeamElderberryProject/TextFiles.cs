@@ -10,7 +10,7 @@
         {
             StringBuilder textFilesToString = new StringBuilder();
 
-            textFilesToString.Append(string.Format(TextFilesDataStringFormat, )); // TO DO
+            //textFilesToString.Append(string.Format(TextFilesDataStringFormat, )); // TO DO
 
             return textFilesToString.ToString();
         }

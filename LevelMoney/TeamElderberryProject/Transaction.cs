@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TeamElderberryProject
+﻿namespace TeamElderberryProject.Interfaces
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
     public abstract class Transaction : ITransaction
     {
         private const int IdLength = 10;
@@ -13,38 +11,38 @@ namespace TeamElderberryProject
 
         static readonly Random random = new Random();// to generate ID
 
-        private string name;
+        private string description;
         private string transactionID;
-        private decimal amount;
-        private DateTime datetime;
 
-        protected Transaction(string name, TransactionType transactionType)
+        protected Transaction(TransactionData data, string description, TransactionType transactionType)
         {
-            this.Name = name;
+            this.Data = data;
+            this.Description = description;
             this.TransactionType = transactionType;
             this.TransactionID = Transaction.GenerateTransactionID();
-            this.DateTime = datetime;
-
         }
-        public TransactionType TransactionType { get; private set; } // type: income or expense
+        public TransactionType TransactionType { get; protected set; }
 
-        public string Name
+        public TransactionData Data { get; protected set; }
+
+        public string Description
         {
             get
             {
-                return this.name;
+                return this.description;
             }
             set
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException("Please provide valid name");
+                    throw new InputException("Please provide valid name", new ArgumentNullException());
                 }
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentOutOfRangeException("Please provide valid name");
+                    throw new InputException("Please provide valid name", new ArgumentOutOfRangeException());
                 }
-                this.name = value;
+
+                this.description = value;
             }
         }
 
@@ -55,39 +53,10 @@ namespace TeamElderberryProject
             {
                 if (value.Length != 10)
                 {
-                    throw new ArgumentOutOfRangeException("ID should be exact 10 symbols!");
+                    throw new InputException("ID should be exact 10 symbols!", new ArgumentOutOfRangeException());
                 }
+
                 this.transactionID = value;
-            }
-        }
-
-        public decimal Amount
-        {
-            get
-            {
-                return this.amount;
-            }
-            set
-            {
-                if (value < 0)
-                {
-                    throw new ArgumentOutOfRangeException("Please provide positive amount");
-                }
-
-                this.amount = value;
-            }
-        }
-
-        public DateTime DateTime
-        {
-            get { return this.datetime; }
-            set
-            {
-               if (value.Date < DateTime.Now)
-               {
-                   throw new ArgumentException ("We cannot have history date!");
-               }
-               this.datetime = value.Date;
             }
         }
 
@@ -121,6 +90,5 @@ namespace TeamElderberryProject
         {
             return this.TransactionID.Equals((obj as Transaction).TransactionID);
         }
-
     }
 }
