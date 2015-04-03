@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TeamElderberryProject.Interfaces
+﻿namespace TeamElderberryProject.Interfaces
 {
     public interface IAccount
     {
-        
+        decimal Balance { get; }
     }
 }

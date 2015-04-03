@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TeamElderberryProject
+﻿namespace TeamElderberryProject
 {
+    using System;
+    using System.Runtime.Serialization;
+
     [Serializable]
     public class InputException : Exception
     {
@@ -26,7 +22,7 @@ namespace TeamElderberryProject
         {
         }
 
-        public InputException(SerializationInfo info, StreamingContext context) 
+        public InputException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
         }
