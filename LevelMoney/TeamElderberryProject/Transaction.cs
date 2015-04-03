@@ -4,8 +4,6 @@
     using System.Collections.Generic;
     using System.Text;
 
-    using TeamElderberryProject.Interfaces;
-
     public abstract class Transaction : ITransaction
     {
         private const int IdLength = 10;
