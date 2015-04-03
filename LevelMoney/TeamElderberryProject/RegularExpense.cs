@@ -3,7 +3,7 @@
     public class RegularExpense : Expense
     {
         public RegularExpense(TransactionData data, string description, TransactionType transactionType)
-            : base(data, description, TransactionType.Expense)
+            : base(data, description, TransactionType.RegularExpense)
         {
         }
     }

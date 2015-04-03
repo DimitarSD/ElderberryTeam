@@ -4,5 +4,9 @@
     {
         Income,
         Expense,
+        RegularIncome,
+        IrregularIncome,
+        RegularExpense,
+        IrregularExpense
     }
 }
