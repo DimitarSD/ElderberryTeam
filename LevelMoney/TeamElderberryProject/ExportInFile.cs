@@ -2,6 +2,7 @@
 {
     using System.IO;
     using System.Text;
+    using System.Web.Script.Serialization;
 
     using TeamElderberryProject.Interfaces;
 
@@ -10,22 +11,26 @@
         public static void SaveExpenseData(ITransaction currentExpense)
         {
             StreamWriter writeExpenseData = new StreamWriter(@"..\..\..\TextFiles\SaveData.txt"); 
-            StringBuilder dataToString = new StringBuilder(currentExpense.ToString());
+            //StringBuilder dataToString = new StringBuilder(currentExpense.ToString());
+
+            var json = new JavaScriptSerializer().Serialize(currentExpense);
 
             using (writeExpenseData)
             {
-                writeExpenseData.WriteLine(dataToString.ToString());
+                writeExpenseData.WriteLine(json);
             }
         }
 
         public static void SaveIncomeData(ITransaction currentIncome)
         {
             StreamWriter writeIncomeData = new StreamWriter(@"..\..\..\TextFiles\SaveData.txt"); 
-            StringBuilder dataToString = new StringBuilder(currentIncome.ToString());
+            //StringBuilder dataToString = new StringBuilder(currentIncome.ToString());
+
+            var json = new JavaScriptSerializer().Serialize(currentIncome);
 
             using (writeIncomeData)
             {
-                writeIncomeData.WriteLine(dataToString.ToString());
+                writeIncomeData.WriteLine(json);
             }
         }
     }
