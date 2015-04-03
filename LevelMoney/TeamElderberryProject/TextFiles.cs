@@ -2,9 +2,9 @@
 {
     using System.Text;
 
-    public abstract class TextFiles
+    public class TextFiles
     {
-        private const string TextFilesDataStringFormat = "Date and time: {0} | Amount: {1} | ";
+        private const string TextFilesDataStringFormat = "ID: {0} | Date and time: {1} | Amount: {2} | ";
 
         public override string ToString()
         {
