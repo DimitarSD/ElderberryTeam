@@ -4,8 +4,8 @@
 
     public abstract class Expense: Transaction, IExpense
     {
-        public Expense(string name, TransactionType transactionType)
-            : base(name, TransactionType.Expense)
+        protected Expense(TransactionData data, string description, TransactionType transactionType)
+            : base(data, description, TransactionType.Expense)
         {
 
         }
