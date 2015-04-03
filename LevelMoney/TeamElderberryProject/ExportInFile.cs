@@ -5,17 +5,12 @@
 
     using TeamElderberryProject.Interfaces;
 
-    public class ExportInFile : TextFiles
+    public class ExportInFile 
     {
-        private const string SaveExpenseDataStringFormat = "Type of expense: {0}";
-        private const string SaveIncomeDataStringFormat = "Type of income: {0}";
-
-        public static void SaveExpenseData(Expense currentExpense)
+        public static void SaveExpenseData(ITransaction currentExpense)
         {
-            StreamWriter writeExpenseData = new StreamWriter(); // TO DO
-            StringBuilder dataToString = new StringBuilder();
-
-            dataToString.Append(""); // TO DO
+            StreamWriter writeExpenseData = new StreamWriter(@"..\..\..\TextFiles\SaveData.txt"); 
+            StringBuilder dataToString = new StringBuilder(currentExpense.ToString());
 
             using (writeExpenseData)
             {
@@ -23,12 +18,10 @@
             }
         }
 
-        public static void SaveIncomeData(Income currentIncome)
+        public static void SaveIncomeData(ITransaction currentIncome)
         {
-            StreamWriter writeIncomeData = new StreamWriter(); // TO DO
-            StringBuilder dataToString = new StringBuilder();
-
-            dataToString.Append(""); // TO DO
+            StreamWriter writeIncomeData = new StreamWriter(@"..\..\..\TextFiles\SaveData.txt"); 
+            StringBuilder dataToString = new StringBuilder(currentIncome.ToString());
 
             using (writeIncomeData)
             {

@@ -1,6 +1,6 @@
 ﻿namespace TeamElderberryProject
 {
-    public class ImportFromFile : TextFiles
+    public class ImportFromFile
     {
     }
 }

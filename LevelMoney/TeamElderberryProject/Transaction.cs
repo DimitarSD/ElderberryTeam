@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.Text;
-    using TeamElderberryProject.Interfaces;
 
     using TeamElderberryProject.Interfaces;
 
@@ -11,6 +10,7 @@
     {
         private const int IdLength = 10;
         private const string IdChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "123456789";
+        private const string TransanctionStringFormat = "ID: {0} | Date and time: {1} | Amount: {2} | Transaction Type: {3} | Description: {4}";
 
         static readonly Random random = new Random();// to generate ID
 
@@ -92,6 +92,20 @@
         public override bool Equals(object obj)
         {
             return this.TransactionID.Equals((obj as Transaction).TransactionID);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder transactionToString = new StringBuilder();
+
+            transactionToString.Append(string.Format(TransanctionStringFormat, 
+                this.TransactionID, 
+                this.Data.Date, 
+                this.Data.Amount, 
+                this.TransactionType, 
+                this.Description)); 
+
+            return transactionToString.ToString();
         }
     }
 }
