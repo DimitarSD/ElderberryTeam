@@ -20,7 +20,6 @@
 
             data = CheckForType(dataList, readLine);
 
-
             while (readLine != null)
             {
                 readLine = readData.ReadLine();
@@ -56,6 +55,7 @@
                 data = new JavaScriptSerializer().Deserialize<IrregularExpense>(readLine);
                 dataList.Add(data);
             }
+
             return data;
         }
     }

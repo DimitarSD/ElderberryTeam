@@ -14,6 +14,7 @@
 
         static readonly Random random = new Random();// to generate ID
 
+        private static List<string> allTransactionIDs = new List<string>();//to keep all IDs
         private string description;
         private string transactionID;
 
@@ -62,9 +63,7 @@
                 this.transactionID = value;
             }
         }
-
-        private static List<string> allTransactionIDs = new List<string>();//to keep all IDs
-
+        
         private static string GenerateTransactionID()
         {
             StringBuilder idBuilder = new StringBuilder();
