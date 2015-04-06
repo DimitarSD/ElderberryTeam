@@ -43,5 +43,10 @@ namespace MoneyManagerForms
             var form4 = new Form3();
             form4.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
