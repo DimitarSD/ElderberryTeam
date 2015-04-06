@@ -1,18 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace MoneyManagerForms
+﻿namespace MoneyManagerForms
 {
-    public partial class Form2 : Form
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Data;
+    using System.Drawing;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
+
+    using TeamElderberryProject;
+    using TeamElderberryProject.Interfaces;
+    public partial class FormAddIncome : Form
     {
-        public Form2()
+        public FormAddIncome()
         {
             InitializeComponent();
         }
@@ -57,7 +59,7 @@ namespace MoneyManagerForms
             //this.Close();
 
             this.Hide();
-            var form4 = new Form1();
+            var form4 = new FormStart();
             form4.Show();
         }
     }
