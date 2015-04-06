@@ -10,7 +10,7 @@
     {
         public static void SaveExpenseData(ITransaction currentExpense)
         {
-            StreamWriter writeExpenseData = new StreamWriter(@"..\..\..\TextFiles\SaveData.txt"); 
+            StreamWriter writeExpenseData = new StreamWriter(@"..\..\..\..\..\..\TextFiles\SaveData.txt",true); 
             //StringBuilder dataToString = new StringBuilder(currentExpense.ToString());
 
             var json = new JavaScriptSerializer().Serialize(currentExpense);
