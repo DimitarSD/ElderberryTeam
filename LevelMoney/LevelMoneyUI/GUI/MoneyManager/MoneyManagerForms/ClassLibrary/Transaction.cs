@@ -108,5 +108,7 @@ namespace TeamElderberryProject
 
             return transactionToString.ToString();
         }
+
+        public abstract decimal BalanceValue();
     }
 }
