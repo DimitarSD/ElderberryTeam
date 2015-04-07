@@ -39,11 +39,11 @@
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new InputException("Please provide valid name", new ArgumentNullException());
+                    throw new InputException(GlobalMessages.ObjectCannotBeNull, new ArgumentNullException());
                 }
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new InputException("Please provide valid name", new ArgumentOutOfRangeException());
+                    throw new InputException(GlobalMessages.ObjectCannotBeNull, new ArgumentOutOfRangeException());
                 }
 
                 this.description = value;
@@ -55,9 +55,9 @@
             get { return this.transactionID; }
             set
             {
-                if (value.Length != 10)
+                if (value.Length != IdLength)
                 {
-                    throw new InputException("ID should be exact 10 symbols!", new ArgumentOutOfRangeException());
+                    throw new InputException(string.Format(GlobalMessages.InvalidStringLength, IdLength), new ArgumentOutOfRangeException());
                 }
 
                 this.transactionID = value;
