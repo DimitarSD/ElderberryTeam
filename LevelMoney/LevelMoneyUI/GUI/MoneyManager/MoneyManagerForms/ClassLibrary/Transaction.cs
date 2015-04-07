@@ -1,4 +1,6 @@
-﻿namespace TeamElderberryProject
+﻿using System.Windows.Forms;
+
+namespace TeamElderberryProject
 {
     using System;
     using System.Collections.Generic;
@@ -39,11 +41,7 @@
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new InputException(GlobalMessages.ObjectCannotBeNull, new ArgumentNullException());
-                }
-                if (string.IsNullOrWhiteSpace(value))
-                {
-                    throw new InputException(GlobalMessages.ObjectCannotBeNull, new ArgumentOutOfRangeException());
+                    MessageBox.Show(GlobalMessages.ObjectCannotBeNull);
                 }
 
                 this.description = value;
