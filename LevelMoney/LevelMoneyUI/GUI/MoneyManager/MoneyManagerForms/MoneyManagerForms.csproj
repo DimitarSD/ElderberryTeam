@@ -58,6 +58,7 @@
     <Compile Include="ClassLibrary\Interfaces\IAccount.cs" />
     <Compile Include="ClassLibrary\Interfaces\IExpense.cs" />
     <Compile Include="ClassLibrary\Interfaces\IExporter.cs" />
+    <Compile Include="ClassLibrary\Interfaces\IImporter.cs" />
     <Compile Include="ClassLibrary\Interfaces\IIncome.cs" />
     <Compile Include="ClassLibrary\Interfaces\ITransaction.cs" />
     <Compile Include="ClassLibrary\IrregularExpense.cs" />

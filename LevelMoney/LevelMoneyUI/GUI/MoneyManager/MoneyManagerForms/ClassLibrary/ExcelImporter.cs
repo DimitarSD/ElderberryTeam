@@ -9,7 +9,7 @@
     using System.Data.OleDb;
     using TeamElderberryProject.Interfaces;
 
-    public class ExcelImporter
+    public class ExcelImporter : IImporter
     {
         public IList<ITransaction> Import()
         {
