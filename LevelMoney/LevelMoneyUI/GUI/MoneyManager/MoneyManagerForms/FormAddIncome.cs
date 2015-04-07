@@ -63,15 +63,23 @@
                 default: MessageBox.Show("Please fill the form!");
                     break;
             }
+            ExcelExporter exporter = new ExcelExporter();
 
-            ExportInFile.SaveIncomeData(incomeToAdd);
+            exporter.Export(incomeToAdd);
 
-            MessageBox.Show(GlobalMessages.IncomeAdded, GlobalMessages.IncomeTitle);
+
+
+            MessageBox.Show(GlobalMessages.IncomeAdded, GlobalMessages.ExpenseTitle);
 
             textBox1.Clear();
             textBox2.Clear();
             comboBox1.ResetText();
             dateTimePicker1.ResetText();
+
+            //Old way printing with json serializer
+            //ExportInFile.SaveIncomeData(incomeToAdd);
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
