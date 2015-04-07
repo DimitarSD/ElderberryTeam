@@ -116,7 +116,6 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(363, 84);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Tuk shte se vizualizira kriniqt srok";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1

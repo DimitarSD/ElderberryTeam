@@ -26,7 +26,7 @@
   
                 addNewTransaction.Parameters.AddWithValue("@Id", transaction.TransactionID);
                 addNewTransaction.Parameters.AddWithValue("@Amount", transaction.Data.Amount);
-                addNewTransaction.Parameters.AddWithValue("@Date", transaction.Data.Date.ToString());
+                addNewTransaction.Parameters.AddWithValue("@Date", transaction.Data.Date.Date.ToShortDateString().ToString());
                 addNewTransaction.Parameters.AddWithValue("@Type", transaction.TransactionType.ToString());
                 addNewTransaction.Parameters.AddWithValue("@Description", transaction.Description);
 

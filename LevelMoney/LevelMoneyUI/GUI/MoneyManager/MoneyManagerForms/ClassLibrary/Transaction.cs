@@ -14,7 +14,7 @@
     {
         private const int IdLength = 10;
         private const string IdChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "123456789";
-        private const string TransanctionStringFormat = "ID: {0} | Date and time: {1} | Amount: {2} | Transaction Type: {3} | Description: {4}";
+        private const string TransanctionStringFormat = "Type: {0} | Date: {1} | Amount: {2} | Description: {3}";
 
         static readonly Random random = new Random();// to generate ID
 
@@ -99,11 +99,10 @@
         {
             StringBuilder transactionToString = new StringBuilder();
 
-            transactionToString.Append(string.Format(TransanctionStringFormat, 
-                this.TransactionID, 
-                this.Data.Date, 
+            transactionToString.Append(string.Format(TransanctionStringFormat,
+                this.TransactionType,
+                this.Data.Date.Date.ToShortDateString(),
                 this.Data.Amount,
-                this.TransactionType, 
                 this.Description)); 
 
             return transactionToString.ToString();

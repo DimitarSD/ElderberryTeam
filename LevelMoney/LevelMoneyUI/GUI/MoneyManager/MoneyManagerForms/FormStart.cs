@@ -14,6 +14,7 @@
     using TeamElderberryProject.Interfaces;
     public partial class FormStart : Form
     {
+        private static ICollection<ITransaction> allTransactions;
         public FormStart()
         {
             InitializeComponent();
@@ -53,11 +54,16 @@
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-
+            label2.ResetText();
+            ListAllExpenses(dateTimePicker1.Value, label2);
         }
 
         private void FormStart_Load(object sender, EventArgs e)
         {
+            var importer = new ExcelImporter();
+            allTransactions = ImportFromFile.ImportData(importer);
+            ListAllExpenses(DateTime.Now, label2);
+            
 
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -85,6 +91,16 @@
             this.Hide();
             var form5 = new FormStatistics();
             form5.Show();
+        }
+
+        private static void ListAllExpenses(DateTime date, Control label)
+        {
+            var allExpenses = allTransactions.Where(t => t.Data.Date.Date == date.Date).ToList();
+
+            foreach (var expense in allExpenses)
+            {
+                label.Text += expense.ToString() + Environment.NewLine;
+            }
         }
     }
 }
