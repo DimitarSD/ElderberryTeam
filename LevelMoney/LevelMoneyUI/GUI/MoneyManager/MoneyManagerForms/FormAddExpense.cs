@@ -56,5 +56,9 @@
             comboBox1.ResetText();
             dateTimePicker1.ResetText();
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

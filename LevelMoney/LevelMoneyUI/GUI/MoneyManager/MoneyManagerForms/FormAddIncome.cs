@@ -62,5 +62,9 @@
             var form4 = new FormStart();
             form4.Show();
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
