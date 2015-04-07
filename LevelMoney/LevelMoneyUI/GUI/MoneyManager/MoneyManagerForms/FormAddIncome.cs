@@ -31,10 +31,33 @@
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult result1 = MessageBox.Show("Are you sure you want to add a new income",
-                                                            "Caution!",
-                                                            MessageBoxButtons.YesNo); 
-            //
+            //DialogResult result1 = MessageBox.Show("Are you sure you want to add a new income",
+            //                                                "Caution!",
+            //                                                MessageBoxButtons.YesNo); 
+            ////
+            var ammount = decimal.Parse(textBox1.Text);
+            var comment = textBox2.Text;
+            var date = DateTime.Parse(dateTimePicker1.Text);
+
+            Income incomeToAdd = null;
+
+            switch (comboBox1.Text)
+            {
+                case "Irregular":
+                    incomeToAdd = new IrregularIncome(new TransactionData(ammount, date), comment);
+                    break;
+                case "Regular":
+                    incomeToAdd = new RegularIncome(new TransactionData(ammount, date), comment);
+                    break;
+                default: MessageBox.Show("Please fill the form!");
+                    break;
+            }
+            ExportInFile.SaveIncomeData(incomeToAdd);
+            MessageBox.Show("An income has been added!");
+            textBox1.Clear();
+            textBox2.Clear();
+            comboBox1.ResetText();
+            dateTimePicker1.ResetText();
         }
 
         private void label1_Click(object sender, EventArgs e)
