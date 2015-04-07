@@ -42,7 +42,7 @@
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form4 = new FormAddExpense();
+            var form4 = new FormAddLoan();
             form4.Show();
         }
 
