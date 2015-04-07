@@ -1,10 +1,14 @@
-﻿namespace TeamElderberryProject
+﻿using System.Windows.Forms;
+
+namespace TeamElderberryProject
 {
     using System;
     using System.Collections.Generic;
     using System.Text;
 
     using TeamElderberryProject.Interfaces;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
 
     public abstract class Transaction : ITransaction
     {
@@ -25,6 +29,8 @@
             this.TransactionType = transactionType;
             this.TransactionID = Transaction.GenerateTransactionID();
         }
+
+        [JsonConverter(typeof(TransactionType))]
         public TransactionType TransactionType { get; protected set; }
 
         public TransactionData Data { get; protected set; }
@@ -39,11 +45,7 @@
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new InputException(GlobalMessages.ObjectCannotBeNull, new ArgumentNullException());
-                }
-                if (string.IsNullOrWhiteSpace(value))
-                {
-                    throw new InputException(GlobalMessages.ObjectCannotBeNull, new ArgumentOutOfRangeException());
+                    MessageBox.Show(GlobalMessages.ObjectCannotBeNull);
                 }
 
                 this.description = value;
@@ -100,11 +102,13 @@
             transactionToString.Append(string.Format(TransanctionStringFormat, 
                 this.TransactionID, 
                 this.Data.Date, 
-                this.Data.Amount, 
+                this.Data.Amount,
                 this.TransactionType, 
                 this.Description)); 
 
             return transactionToString.ToString();
         }
+
+        public abstract decimal BalanceValue();
     }
 }
