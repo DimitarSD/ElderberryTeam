@@ -45,8 +45,11 @@
                     break;
             }
 
+            ExcelExporter exporter = new ExcelExporter();
 
-            ExportInFile.SaveExpenseData(expense);
+            exporter.Export(expense);
+
+
 
             MessageBox.Show(GlobalMessages.ExpenseAdded, GlobalMessages.ExpenseTitle);
 
@@ -54,6 +57,9 @@
             textBox2.Clear();
             comboBox1.ResetText();
             dateTimePicker1.ResetText();
+
+            //Old way printing with json serializer
+            //ExportInFile.SaveExpenseData(expense);
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
