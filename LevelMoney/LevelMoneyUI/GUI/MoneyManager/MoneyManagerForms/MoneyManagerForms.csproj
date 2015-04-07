@@ -46,30 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassLibrary\Account.cs" />
-    <Compile Include="ClassLibrary\ExcelExporter.cs" />
-    <Compile Include="ClassLibrary\ExcelImporter.cs" />
-    <Compile Include="ClassLibrary\Expense.cs" />
-    <Compile Include="ClassLibrary\ExportInFile.cs" />
-    <Compile Include="ClassLibrary\GlobalMessages.cs" />
-    <Compile Include="ClassLibrary\ImportFromFile.cs" />
-    <Compile Include="ClassLibrary\Income.cs" />
-    <Compile Include="ClassLibrary\InputException.cs" />
-    <Compile Include="ClassLibrary\Interfaces\IAccount.cs" />
-    <Compile Include="ClassLibrary\Interfaces\IExpense.cs" />
-    <Compile Include="ClassLibrary\Interfaces\IExporter.cs" />
-    <Compile Include="ClassLibrary\Interfaces\IImporter.cs" />
-    <Compile Include="ClassLibrary\Interfaces\IIncome.cs" />
-    <Compile Include="ClassLibrary\Interfaces\ITransaction.cs" />
-    <Compile Include="ClassLibrary\IrregularExpense.cs" />
-    <Compile Include="ClassLibrary\IrregularIncome.cs" />
-    <Compile Include="ClassLibrary\JsonExporter.cs" />
-    <Compile Include="ClassLibrary\RegularExpense.cs" />
-    <Compile Include="ClassLibrary\RegularIncome.cs" />
-    <Compile Include="ClassLibrary\Statistics.cs" />
-    <Compile Include="ClassLibrary\Transaction.cs" />
-    <Compile Include="ClassLibrary\TransactionalType.cs" />
-    <Compile Include="ClassLibrary\TransactionData.cs" />
     <Compile Include="FormStatistics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,8 +103,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="ClassLibrary\App.config" />
-    <None Include="ClassLibrary\ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -153,6 +127,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\index.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\ClassLibrary1\TeamElderberryProject.csproj">
+      <Project>{03101af6-14ae-4945-b324-55d328d64a4c}</Project>
+      <Name>TeamElderberryProject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
