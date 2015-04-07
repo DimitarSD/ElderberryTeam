@@ -63,7 +63,7 @@
             var importer = new ExcelImporter();
             allTransactions = ImportFromFile.ImportData(importer);
             ListAllExpenses(DateTime.Now, label2);
-            
+
 
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -95,11 +95,22 @@
 
         private static void ListAllExpenses(DateTime date, Control label)
         {
-            var allExpenses = allTransactions.Where(t => t.Data.Date.Date == date.Date).ToList();
+            var allExpenses = allTransactions.Where(t => t.Data.Date.Date == date.Date && t is Expense).ToList();
 
-            foreach (var expense in allExpenses)
+            if (allExpenses.Count > 0)
             {
-                label.Text += expense.ToString() + Environment.NewLine;
+                label.Text = string.Format("{0} {1} for this date:\n",
+                    allExpenses.Count,
+                    allExpenses.Count == 1 ? "expense" : "expenses");
+
+                foreach (var expense in allExpenses)
+                {
+                    label.Text += expense.ToString() + Environment.NewLine;
+                }
+            }
+            else
+            {
+                label.Text = "No expenses for this date.";
             }
         }
     }
