@@ -8,30 +8,19 @@
 
     public class ExportInFile 
     {
-        public static void SaveExpenseData(ITransaction currentExpense)
+        public static void SaveExpenseData(IExporter exporter, ITransaction transaction)
         {
-            StreamWriter writeExpenseData = new StreamWriter(@"..\..\..\..\..\..\TextFiles\SaveData.txt",true); 
-            //StringBuilder dataToString = new StringBuilder(currentExpense.ToString());
+            //StreamWriter writeExpenseData = new StreamWriter(@"..\..\..\..\..\..\TextFiles\SaveData.txt",true); 
+            ////StringBuilder dataToString = new StringBuilder(currentExpense.ToString());
 
-            var json = new JavaScriptSerializer().Serialize(currentExpense);
+            //var json = new JavaScriptSerializer().Serialize(currentExpense);
 
-            using (writeExpenseData)
-            {
-                writeExpenseData.WriteLine(json);
-            }
-        }
+            //using (writeExpenseData)
+            //{
+            //    writeExpenseData.WriteLine(json);
+            //}
+            exporter.Export(transaction);
 
-        public static void SaveIncomeData(ITransaction currentIncome)
-        {
-            StreamWriter writeIncomeData = new StreamWriter(@"..\..\..\..\..\..\TextFiles\SaveData.txt",true); 
-            //StringBuilder dataToString = new StringBuilder(currentIncome.ToString());
-
-            var json = new JavaScriptSerializer().Serialize(currentIncome);
-
-            using (writeIncomeData)
-            {
-                writeIncomeData.WriteLine(json);
-            }
         }
     }
 }

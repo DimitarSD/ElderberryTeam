@@ -1,4 +1,4 @@
-﻿namespace MoneyManagerForms
+﻿namespace TeamElderberryProject
 {
     using System;
     using System.Collections.Generic;
@@ -11,7 +11,7 @@
 
     using TeamElderberryProject.Interfaces;
 
-    public class ExcelExporter
+    public class ExcelExporter : IExporter
     {
         public void Export(ITransaction transaction)
         {

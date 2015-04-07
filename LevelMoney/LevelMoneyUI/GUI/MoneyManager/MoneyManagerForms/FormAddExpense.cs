@@ -48,9 +48,9 @@
                     break;
             }
 
-            ExcelExporter exporter = new ExcelExporter();
+            var exporter = new ExcelExporter();
 
-            exporter.Export(expense);
+            ExportInFile.SaveExpenseData(exporter, expense);
 
             MessageBox.Show(GlobalMessages.ExpenseAdded, GlobalMessages.ExpenseTitle);
 
