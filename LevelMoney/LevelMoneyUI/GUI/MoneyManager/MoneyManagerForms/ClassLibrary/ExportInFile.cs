@@ -23,7 +23,7 @@
 
         public static void SaveIncomeData(ITransaction currentIncome)
         {
-            StreamWriter writeIncomeData = new StreamWriter(@"..\..\..\TextFiles\SaveData.txt"); 
+            StreamWriter writeIncomeData = new StreamWriter(@"..\..\..\..\..\..\TextFiles\SaveData.txt"); 
             //StringBuilder dataToString = new StringBuilder(currentIncome.ToString());
 
             var json = new JavaScriptSerializer().Serialize(currentIncome);
