@@ -62,6 +62,7 @@
     <Compile Include="ClassLibrary\Interfaces\ITransaction.cs" />
     <Compile Include="ClassLibrary\IrregularExpense.cs" />
     <Compile Include="ClassLibrary\IrregularIncome.cs" />
+    <Compile Include="ClassLibrary\JsonExporter.cs" />
     <Compile Include="ClassLibrary\RegularExpense.cs" />
     <Compile Include="ClassLibrary\RegularIncome.cs" />
     <Compile Include="ClassLibrary\Statistics.cs" />

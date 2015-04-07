@@ -23,7 +23,7 @@
             using (excelCon)
             {
                 OleDbCommand addNewTransaction = new OleDbCommand("INSERT INTO [Transactions$](Id, Amount, [Date], [Type], Description) VALUES(@Id, @Amount, @Date, @Type, @Description)", excelCon);
-                //("INSERT INTO [ScoresSheet$](Name, Score) VALUES(@name, @score)", excelCon);
+  
                 addNewTransaction.Parameters.AddWithValue("@Id", transaction.TransactionID);
                 addNewTransaction.Parameters.AddWithValue("@Amount", transaction.Data.Amount);
                 addNewTransaction.Parameters.AddWithValue("@Date", transaction.Data.Date.ToString());

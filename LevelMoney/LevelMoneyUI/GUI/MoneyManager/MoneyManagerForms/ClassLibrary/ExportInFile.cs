@@ -8,19 +8,10 @@
 
     public class ExportInFile 
     {
+        // Strategy
         public static void SaveExpenseData(IExporter exporter, ITransaction transaction)
         {
-            //StreamWriter writeExpenseData = new StreamWriter(@"..\..\..\..\..\..\TextFiles\SaveData.txt",true); 
-            ////StringBuilder dataToString = new StringBuilder(currentExpense.ToString());
-
-            //var json = new JavaScriptSerializer().Serialize(currentExpense);
-
-            //using (writeExpenseData)
-            //{
-            //    writeExpenseData.WriteLine(json);
-            //}
             exporter.Export(transaction);
-
         }
     }
 }

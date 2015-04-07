@@ -48,6 +48,8 @@
                     break;
             }
 
+            // You can change the logic from here.
+            // Only instantiate new JsonExporter/ExcelExporter or anything that implements IExporter
             var exporter = new ExcelExporter();
 
             ExportInFile.SaveExpenseData(exporter, expense);
