@@ -7,6 +7,8 @@ namespace TeamElderberryProject
     using System.Text;
 
     using TeamElderberryProject.Interfaces;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
 
     public abstract class Transaction : ITransaction
     {
@@ -27,6 +29,8 @@ namespace TeamElderberryProject
             this.TransactionType = transactionType;
             this.TransactionID = Transaction.GenerateTransactionID();
         }
+
+        [JsonConverter(typeof(TransactionType))]
         public TransactionType TransactionType { get; protected set; }
 
         public TransactionData Data { get; protected set; }
@@ -98,7 +102,7 @@ namespace TeamElderberryProject
             transactionToString.Append(string.Format(TransanctionStringFormat, 
                 this.TransactionID, 
                 this.Data.Date, 
-                this.Data.Amount, 
+                this.Data.Amount,
                 this.TransactionType, 
                 this.Description)); 
 
