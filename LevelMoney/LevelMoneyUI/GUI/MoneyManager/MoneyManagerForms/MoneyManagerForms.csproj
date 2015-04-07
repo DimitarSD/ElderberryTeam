@@ -67,6 +67,12 @@
     <Compile Include="ClassLibrary\Transaction.cs" />
     <Compile Include="ClassLibrary\TransactionalType.cs" />
     <Compile Include="ClassLibrary\TransactionData.cs" />
+    <Compile Include="FormStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStatistics.Designer.cs">
+      <DependentUpon>FormStatistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormStart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormStatistics.resx">
+      <DependentUpon>FormStatistics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormStart.resx">
       <DependentUpon>FormStart.cs</DependentUpon>
     </EmbeddedResource>

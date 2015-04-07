@@ -74,5 +74,17 @@
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form5 = new FormStatistics();
+            form5.Show();
+        }
     }
 }

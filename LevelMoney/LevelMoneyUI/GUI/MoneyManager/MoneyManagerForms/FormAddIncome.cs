@@ -36,17 +36,7 @@
             //                                                MessageBoxButtons.YesNo); 
             //
 
-            var ammount = 0m;
-            if (!(textBox1.Text.GetType() == typeof(string)))
-            {
-                ammount = decimal.Parse(textBox1.Text);
-                
-            }
-            else
-            {
-                MessageBox.Show(GlobalMessages.InvalivDecimalInput);
-            }
-            
+            var ammount = decimal.Parse(textBox1.Text);
             var comment = textBox2.Text;
             var date = DateTime.Parse(dateTimePicker1.Text);
 
@@ -63,15 +53,23 @@
                 default: MessageBox.Show("Please fill the form!");
                     break;
             }
+            ExcelExporter exporter = new ExcelExporter();
 
-            ExportInFile.SaveIncomeData(incomeToAdd);
+            exporter.Export(incomeToAdd);
 
-            MessageBox.Show(GlobalMessages.IncomeAdded, GlobalMessages.IncomeTitle);
+
+
+            MessageBox.Show(GlobalMessages.IncomeAdded, GlobalMessages.ExpenseTitle);
 
             textBox1.Clear();
             textBox2.Clear();
             comboBox1.ResetText();
             dateTimePicker1.ResetText();
+
+            //Old way printing with json serializer
+            //ExportInFile.SaveIncomeData(incomeToAdd);
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
