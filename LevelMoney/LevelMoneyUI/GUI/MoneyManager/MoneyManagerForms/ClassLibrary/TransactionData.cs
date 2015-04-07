@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.CodeDom.Compiler;
+using System.Windows.Forms;
 
 namespace TeamElderberryProject
 {
@@ -28,13 +29,7 @@ namespace TeamElderberryProject
                 {
                     MessageBox.Show(GlobalMessages.NonNegativeInput);
                 }
-                // ToDo: check if value is string
-                //if (value)
-                //{
-                //    //throw new InputException(GlobalMessages.NonNegativeInput, new ArgumentOutOfRangeException());
-                //    MessageBox.Show(GlobalMessages.InvalivDecimalInput);
-                //}
-
+                
                 this.amount = value;
             }
         }
