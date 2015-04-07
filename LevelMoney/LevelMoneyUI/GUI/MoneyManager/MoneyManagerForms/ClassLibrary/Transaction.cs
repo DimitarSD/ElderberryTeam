@@ -1,4 +1,6 @@
-﻿namespace TeamElderberryProject
+﻿using System.Windows.Forms;
+
+namespace TeamElderberryProject
 {
     using System;
     using System.Collections.Generic;
@@ -43,11 +45,7 @@
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new InputException("Please provide valid name", new ArgumentNullException());
-                }
-                if (string.IsNullOrWhiteSpace(value))
-                {
-                    throw new InputException("Please provide valid name", new ArgumentOutOfRangeException());
+                    MessageBox.Show(GlobalMessages.ObjectCannotBeNull);
                 }
 
                 this.description = value;
@@ -59,9 +57,9 @@
             get { return this.transactionID; }
             set
             {
-                if (value.Length != 10)
+                if (value.Length != IdLength)
                 {
-                    throw new InputException("ID should be exact 10 symbols!", new ArgumentOutOfRangeException());
+                    throw new InputException(string.Format(GlobalMessages.InvalidStringLength, IdLength), new ArgumentOutOfRangeException());
                 }
 
                 this.transactionID = value;

@@ -49,6 +49,7 @@
     <Compile Include="ClassLibrary\Account.cs" />
     <Compile Include="ClassLibrary\Expense.cs" />
     <Compile Include="ClassLibrary\ExportInFile.cs" />
+    <Compile Include="ClassLibrary\GlobalMessages.cs" />
     <Compile Include="ClassLibrary\ImportFromFile.cs" />
     <Compile Include="ClassLibrary\Income.cs" />
     <Compile Include="ClassLibrary\InputException.cs" />

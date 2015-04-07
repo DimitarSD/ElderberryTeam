@@ -32,6 +32,7 @@
 
             Expense expense = null;
 
+
             switch (comboBox1.Text)
             {
                 case "Irregular":
@@ -44,8 +45,9 @@
                     break;
             }
 
-            ExportInFile.SaveExpenseData(expense);
 
+            ExportInFile.SaveExpenseData(expense);
+            MessageBox.Show(GlobalMessages.ExpenseAdded, GlobalMessages.ExpenseTitle);
             textBox1.Clear();
             textBox2.Clear();
             comboBox1.ResetText();

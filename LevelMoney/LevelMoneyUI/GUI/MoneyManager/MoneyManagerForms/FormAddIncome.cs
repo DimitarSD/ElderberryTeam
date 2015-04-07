@@ -52,8 +52,11 @@
                 default: MessageBox.Show("Please fill the form!");
                     break;
             }
+
             ExportInFile.SaveIncomeData(incomeToAdd);
-            MessageBox.Show("An income has been added!");
+
+            MessageBox.Show(GlobalMessages.IncomeAdded, GlobalMessages.IncomeTitle);
+
             textBox1.Clear();
             textBox2.Clear();
             comboBox1.ResetText();

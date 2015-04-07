@@ -1,4 +1,6 @@
-﻿namespace TeamElderberryProject
+﻿using System.Windows.Forms;
+
+namespace TeamElderberryProject
 {
     using System;
 
@@ -24,9 +26,13 @@
             {
                 if (value < 0)
                 {
-                    //throw new ArgumentOutOfRangeException("Amount cannot be negative number");
-                    throw new InputException("Amount cannot be negative number!", new ArgumentOutOfRangeException());
+                    MessageBox.Show(GlobalMessages.NonNegativeInput);
                 }
+                //if (int.Parse(value))
+                //{
+                //    //throw new InputException(GlobalMessages.NonNegativeInput, new ArgumentOutOfRangeException());
+                //    MessageBox.Show(GlobalMessages.NonNegativeInput);
+                //}
 
                 this.amount = value;
             }
@@ -43,5 +49,7 @@
                 this.date = value;
             }
         }
+
+        
     }
 }

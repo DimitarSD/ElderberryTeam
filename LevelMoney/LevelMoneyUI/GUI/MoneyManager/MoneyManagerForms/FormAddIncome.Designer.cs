@@ -76,7 +76,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Type of income:";
+            this.label1.Text = "Income type:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
