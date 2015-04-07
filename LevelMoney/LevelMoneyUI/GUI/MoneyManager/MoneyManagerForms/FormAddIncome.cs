@@ -36,17 +36,7 @@
             //                                                MessageBoxButtons.YesNo); 
             //
 
-            var ammount = 0m;
-            if (!(textBox1.Text.GetType() == typeof(string)))
-            {
-                ammount = decimal.Parse(textBox1.Text);
-                
-            }
-            else
-            {
-                MessageBox.Show(GlobalMessages.InvalivDecimalInput);
-            }
-            
+            var ammount = decimal.Parse(textBox1.Text);
             var comment = textBox2.Text;
             var date = DateTime.Parse(dateTimePicker1.Text);
 

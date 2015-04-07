@@ -21,16 +21,8 @@
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var ammount = 0m;
-            if (!(textBox1.Text.GetType() == typeof(string)))
-            {
-                ammount = decimal.Parse(textBox1.Text);
+            var ammount = decimal.Parse(textBox1.Text);
 
-            }
-            else
-            {
-                MessageBox.Show(GlobalMessages.InvalivDecimalInput);
-            }
 
             MessageBox.Show(GlobalMessages.LoanAdded, GlobalMessages.LoanTitle);
         }
