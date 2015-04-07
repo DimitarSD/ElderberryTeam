@@ -12,7 +12,7 @@
         {
             ICollection<ITransaction> dataList = new List<ITransaction>();
 
-            StreamReader readData = new StreamReader(@"..\..\..\TextFiles\SaveData.txt");
+            StreamReader readData = new StreamReader(@"..\..\..\..\..\..\TextFiles\SaveData.txt");
 
             var readLine = readData.ReadLine();
 
