@@ -1,7 +1,8 @@
 ﻿namespace TeamElderberryProject
 {
-    using TeamElderberryProject.Interfaces;
     using System.Collections.Generic;
+
+    using TeamElderberryProject.Interfaces;
 
     public sealed class Account : IAccount
     {
@@ -10,7 +11,9 @@
         private ICollection<ITransaction> transactions = new List<ITransaction>();
         private decimal balance;
 
-        private Account() { }
+        private Account()
+        {
+        }
 
         public static Account Instance
         {
@@ -22,10 +25,10 @@
 
         public decimal Balance
         {
-            get 
+            get
             {
                 this.CalculateBalance();
-                return this.balance; 
+                return this.balance;
             }
 
             private set
@@ -41,7 +44,7 @@
 
         public void AddTransaction(ITransaction transaction)
         {
-            this.transactions.Add(transaction);            
+            this.transactions.Add(transaction);
         }
 
         private void CalculateBalance()
@@ -49,14 +52,6 @@
             foreach (var transaction in this.transactions)
             {
                 this.Balance += transaction.BalanceValue();
-                //if (transaction.TransactionType == TransactionType.Income)
-                //{
-                //    this.balance += transaction.Data.Amount;
-                //}
-                //else
-                //{
-                //    this.balance -= transaction.Data.Amount;
-                //}
             }
         }
     }

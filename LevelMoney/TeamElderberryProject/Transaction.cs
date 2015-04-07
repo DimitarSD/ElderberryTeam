@@ -3,12 +3,11 @@
     using System;
     using System.Collections.Generic;
     using System.Text;
+    using System.Windows.Forms;
+
+    using Newtonsoft.Json;
 
     using TeamElderberryProject.Interfaces;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
-    using System.Windows.Forms;
 
     public abstract class Transaction : ITransaction
     {
@@ -16,9 +15,9 @@
         private const string IdChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "123456789";
         private const string TransanctionStringFormat = "Type: {0} | Date: {1} | Amount: {2} | Description: {3}";
 
-        static readonly Random random = new Random();// to generate ID
+        private static readonly Random random = new Random();
 
-        private static List<string> allTransactionIDs = new List<string>();//to keep all IDs
+        private static List<string> allTransactionIDs = new List<string>();
         private string description;
         private string transactionID;
 
@@ -41,6 +40,7 @@
             {
                 return this.description;
             }
+
             set
             {
                 if (string.IsNullOrEmpty(value))
@@ -54,7 +54,11 @@
 
         public string TransactionID
         {
-            get { return this.transactionID; }
+            get
+            {
+                return this.transactionID;
+            }
+
             set
             {
                 if (value.Length != IdLength)
@@ -65,7 +69,33 @@
                 this.transactionID = value;
             }
         }
-        
+
+        public override int GetHashCode()
+        {
+            return this.TransactionID.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            return this.TransactionID.Equals((obj as Transaction).TransactionID);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder transactionToString = new StringBuilder();
+
+            transactionToString.Append(string.Format(
+                TransanctionStringFormat,
+                this.TransactionType,
+                this.Data.Date.Date.ToShortDateString(),
+                this.Data.Amount,
+                this.Description));
+
+            return transactionToString.ToString();
+        }
+
+        public abstract decimal BalanceValue();
+
         private static string GenerateTransactionID()
         {
             StringBuilder idBuilder = new StringBuilder();
@@ -84,30 +114,5 @@
 
             return result;
         }
-
-        public override int GetHashCode()
-        {
-            return this.TransactionID.GetHashCode();
-        }
-
-        public override bool Equals(object obj)
-        {
-            return this.TransactionID.Equals((obj as Transaction).TransactionID);
-        }
-
-        public override string ToString()
-        {
-            StringBuilder transactionToString = new StringBuilder();
-
-            transactionToString.Append(string.Format(TransanctionStringFormat,
-                this.TransactionType,
-                this.Data.Date.Date.ToShortDateString(),
-                this.Data.Amount,
-                this.Description)); 
-
-            return transactionToString.ToString();
-        }
-
-        public abstract decimal BalanceValue();
     }
 }

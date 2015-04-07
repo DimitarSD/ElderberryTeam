@@ -7,7 +7,6 @@
         protected Expense(TransactionData data, string description, TransactionType transactionType)
             : base(data, description, transactionType)
         {
-
         }
 
         public override decimal BalanceValue()

@@ -11,7 +11,6 @@
         {
         }
 
-
         public InputException(string message)
             : base(message)
         {

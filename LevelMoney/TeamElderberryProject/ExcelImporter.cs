@@ -2,11 +2,9 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
     using System.Data.OleDb;
+
     using TeamElderberryProject.Interfaces;
 
     public class ExcelImporter : IImporter
@@ -44,7 +42,6 @@
 
         private static ITransaction GenerateTransaction(decimal amount, DateTime date, string typeAsString, string description)
         {
-
             Transaction transaction = null;
 
             switch (typeAsString)

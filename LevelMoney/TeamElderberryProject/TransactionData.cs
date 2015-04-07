@@ -1,9 +1,7 @@
-﻿using System.CodeDom.Compiler;
-using System.Windows.Forms;
-
-namespace TeamElderberryProject
+﻿namespace TeamElderberryProject
 {
     using System;
+    using System.Windows.Forms;
 
     public struct TransactionData
     {
@@ -23,13 +21,14 @@ namespace TeamElderberryProject
             {
                 return this.amount;
             }
+
             private set
             {
                 if (value < 0)
                 {
                     MessageBox.Show(GlobalMessages.NonNegativeInput);
                 }
-                
+
                 this.amount = value;
             }
         }
@@ -40,11 +39,11 @@ namespace TeamElderberryProject
             {
                 return this.date;
             }
+
             private set
             {
                 this.date = value;
             }
         }
-
     }
 }
