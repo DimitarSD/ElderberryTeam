@@ -27,6 +27,11 @@
                 this.CalculateBalance();
                 return this.balance; 
             }
+
+            private set
+            {
+                this.balance = value;
+            }
         }
 
         public ICollection<ITransaction> Transactions
@@ -43,14 +48,15 @@
         {
             foreach (var transaction in this.transactions)
             {
-                if (transaction.TransactionType == TransactionType.Income)
-                {
-                    this.balance += transaction.Data.Amount;
-                }
-                else
-                {
-                    this.balance -= transaction.Data.Amount;
-                }
+                this.Balance += transaction.BalanceValue();
+                //if (transaction.TransactionType == TransactionType.Income)
+                //{
+                //    this.balance += transaction.Data.Amount;
+                //}
+                //else
+                //{
+                //    this.balance -= transaction.Data.Amount;
+                //}
             }
         }
     }

@@ -1,4 +1,7 @@
-﻿namespace TeamElderberryProject
+﻿using System.CodeDom.Compiler;
+using System.Windows.Forms;
+
+namespace TeamElderberryProject
 {
     using System;
 
@@ -24,9 +27,9 @@
             {
                 if (value < 0)
                 {
-                    throw new InputException(GlobalErrorMessages.NonNegativeInput, new ArgumentOutOfRangeException());
+                    MessageBox.Show(GlobalMessages.NonNegativeInput);
                 }
-
+                
                 this.amount = value;
             }
         }
@@ -42,5 +45,6 @@
                 this.date = value;
             }
         }
+
     }
 }

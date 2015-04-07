@@ -2,7 +2,7 @@
 {
     public class IrregularIncome : Income
     {
-        public IrregularIncome(TransactionData data, string description, TransactionType transactionType)
+        public IrregularIncome(TransactionData data, string description)
             : base(data, description, TransactionType.IrregularIncome)
         {
         }

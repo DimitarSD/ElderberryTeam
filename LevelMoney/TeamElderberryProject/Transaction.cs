@@ -5,12 +5,16 @@
     using System.Text;
 
     using TeamElderberryProject.Interfaces;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    using System.Windows.Forms;
 
     public abstract class Transaction : ITransaction
     {
         private const int IdLength = 10;
         private const string IdChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "123456789";
-        private const string TransanctionStringFormat = "ID: {0} | Date and time: {1} | Amount: {2} | Transaction Type: {3} | Description: {4}";
+        private const string TransanctionStringFormat = "Type: {0} | Date: {1} | Amount: {2} | Description: {3}";
 
         static readonly Random random = new Random();// to generate ID
 
@@ -25,6 +29,8 @@
             this.TransactionType = transactionType;
             this.TransactionID = Transaction.GenerateTransactionID();
         }
+
+        [JsonConverter(typeof(TransactionType))]
         public TransactionType TransactionType { get; protected set; }
 
         public TransactionData Data { get; protected set; }
@@ -39,12 +45,7 @@
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new InputException(GlobalErrorMessages.ObjectCannotBeNull, new ArgumentNullException());
-       
-                }
-                if (string.IsNullOrWhiteSpace(value))
-                {
-                    throw new InputException(GlobalErrorMessages.ObjectCannotBeNull, new ArgumentOutOfRangeException());
+                    MessageBox.Show(GlobalMessages.ObjectCannotBeNull);
                 }
 
                 this.description = value;
@@ -56,9 +57,9 @@
             get { return this.transactionID; }
             set
             {
-                if (value.Length != 10)
+                if (value.Length != IdLength)
                 {
-                    throw new InputException(GlobalErrorMessages.InvalidStringLength, new ArgumentOutOfRangeException());
+                    throw new InputException(string.Format(GlobalMessages.InvalidStringLength, IdLength), new ArgumentOutOfRangeException());
                 }
 
                 this.transactionID = value;
@@ -98,14 +99,15 @@
         {
             StringBuilder transactionToString = new StringBuilder();
 
-            transactionToString.Append(string.Format(TransanctionStringFormat, 
-                this.TransactionID, 
-                this.Data.Date, 
-                this.Data.Amount, 
-                this.TransactionType, 
+            transactionToString.Append(string.Format(TransanctionStringFormat,
+                this.TransactionType,
+                this.Data.Date.Date.ToShortDateString(),
+                this.Data.Amount,
                 this.Description)); 
 
             return transactionToString.ToString();
         }
+
+        public abstract decimal BalanceValue();
     }
 }
