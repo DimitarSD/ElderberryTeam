@@ -6,7 +6,7 @@
 
     using TeamElderberryProject.Interfaces;
 
-    public class ImportFromFile
+    public static class ImportFromFile
     {
         public static ICollection<ITransaction> ImportData()
         {
