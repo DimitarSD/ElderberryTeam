@@ -13,12 +13,6 @@
 
     public class ExcelExporter
     {
-
-
-        public ExcelExporter()
-        {
-        }
-
         public void Export(ITransaction transaction)
         {
             OleDbConnection excelCon =

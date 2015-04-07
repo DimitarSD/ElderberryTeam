@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="ClassLibrary\Account.cs" />
     <Compile Include="ClassLibrary\ExcelExporter.cs" />
+    <Compile Include="ClassLibrary\ExcelImporter.cs" />
     <Compile Include="ClassLibrary\Expense.cs" />
     <Compile Include="ClassLibrary\ExportInFile.cs" />
     <Compile Include="ClassLibrary\GlobalMessages.cs" />

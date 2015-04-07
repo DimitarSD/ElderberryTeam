@@ -12,6 +12,7 @@
 
     using TeamElderberryProject;
     using TeamElderberryProject.Interfaces;
+
     public partial class FormAddExpense : Form
     {
         public FormAddExpense()
@@ -58,8 +59,6 @@
             ExcelExporter exporter = new ExcelExporter();
 
             exporter.Export(expense);
-
-
 
             MessageBox.Show(GlobalMessages.ExpenseAdded, GlobalMessages.ExpenseTitle);
 

@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-
-namespace TeamElderberryProject
+﻿namespace TeamElderberryProject
 {
     using System;
     using System.Collections.Generic;
@@ -9,6 +7,8 @@ namespace TeamElderberryProject
     using TeamElderberryProject.Interfaces;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
+
+    using System.Windows.Forms;
 
     public abstract class Transaction : ITransaction
     {
