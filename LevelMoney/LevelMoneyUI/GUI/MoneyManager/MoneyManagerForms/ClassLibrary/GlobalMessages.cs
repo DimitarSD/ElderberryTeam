@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeamElderberryProject
 {
-    public class GlobalMessages
+    public static class GlobalMessages
     {
         public const string NonNegativeInput = "Amount cannot be negative number!";
         public const string ObjectCannotBeNull = "Please provide valid name!";
