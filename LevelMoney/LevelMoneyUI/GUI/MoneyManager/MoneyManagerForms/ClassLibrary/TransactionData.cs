@@ -28,10 +28,11 @@ namespace TeamElderberryProject
                 {
                     MessageBox.Show(GlobalMessages.NonNegativeInput);
                 }
-                //if (int.Parse(value))
+                // ToDo: check if value is string
+                //if (value)
                 //{
                 //    //throw new InputException(GlobalMessages.NonNegativeInput, new ArgumentOutOfRangeException());
-                //    MessageBox.Show(GlobalMessages.NonNegativeInput);
+                //    MessageBox.Show(GlobalMessages.InvalivDecimalInput);
                 //}
 
                 this.amount = value;
@@ -50,6 +51,5 @@ namespace TeamElderberryProject
             }
         }
 
-        
     }
 }

@@ -47,7 +47,9 @@
 
 
             ExportInFile.SaveExpenseData(expense);
+
             MessageBox.Show(GlobalMessages.ExpenseAdded, GlobalMessages.ExpenseTitle);
+
             textBox1.Clear();
             textBox2.Clear();
             comboBox1.ResetText();
