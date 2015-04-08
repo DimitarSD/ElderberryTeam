@@ -43,6 +43,7 @@
             var startDate = datePickerStart.Value;
             var endDate = datePickerEnd.Value;
             var currentAccount = Account.Instance;
+            currentAccount.Clear();
             var importer = new ExcelImporter();
             var currentList = ImportFromFile.ImportData(importer);
             foreach (var transaction in currentList)
@@ -54,6 +55,7 @@
             ChangeTextbox(datePickerStart.Value, datePickerEnd.Value, TransactionType.IrregularIncome, StatisticsTextBox);
             ChangeTextbox(datePickerStart.Value, datePickerEnd.Value, TransactionType.RegularExpense, StatisticsTextBox);
             ChangeTextbox(datePickerStart.Value, datePickerEnd.Value, TransactionType.IrregularExpense, StatisticsTextBox);
+            CheckIfEmpty(datePickerStart.Value, datePickerEnd.Value, "Transaction", StatisticsTextBox);
         }
 
         private void buttonIncomes_Click(object sender, EventArgs e)

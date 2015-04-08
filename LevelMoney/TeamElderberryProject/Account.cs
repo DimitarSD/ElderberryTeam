@@ -9,7 +9,7 @@
         // Implements Singleton design pattern with lazy loading
         private static readonly Account instance = new Account();
         private IList<ITransaction> transactions = new List<ITransaction>();
-        private decimal balance = 0;
+        private decimal balance;
 
         private Account()
         {
@@ -46,9 +46,14 @@
         {
             this.transactions.Add(transaction);
         }
+        public void Clear()
+        {
+            this.transactions.Clear();
+        }
 
         private void CalculateBalance()
         {
+            this.balance = 0;
             foreach (var transaction in this.transactions)
             {
                 this.balance += transaction.BalanceValue();
