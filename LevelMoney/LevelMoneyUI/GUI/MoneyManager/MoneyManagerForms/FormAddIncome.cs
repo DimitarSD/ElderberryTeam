@@ -81,10 +81,6 @@
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //MoreActions form2 = new MoreActions();
-            //form2.Show();
-            //this.Close();
-
             this.Hide();
             var form4 = new FormStart();
             form4.Show(this);
@@ -94,19 +90,13 @@
             Environment.Exit(0);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-        }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             var commentLenght = textBox2.TextLength;
-
             if (commentLenght > CommentLenghtManimumValue)
             {
                 string errorMessage = string.Format(GlobalMessages.ExpenseCommentLenghtErrorMessage, CommentLenghtManimumValue);
                 MessageBox.Show(errorMessage, GlobalMessages.ExpenseTitle);
-
                 textBox2.Clear();
             }
         }

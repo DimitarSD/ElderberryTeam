@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStatistics));
             this.StatisticsTextBox = new System.Windows.Forms.RichTextBox();
             this.datePickerStart = new System.Windows.Forms.DateTimePicker();
             this.datePickerEnd = new System.Windows.Forms.DateTimePicker();
@@ -237,8 +238,9 @@
             this.Controls.Add(this.datePickerEnd);
             this.Controls.Add(this.datePickerStart);
             this.Controls.Add(this.StatisticsTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormStatistics";
-            this.Text = "Form1";
+            this.Text = "Statistics";
             this.Load += new System.EventHandler(this.FormStatistics_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

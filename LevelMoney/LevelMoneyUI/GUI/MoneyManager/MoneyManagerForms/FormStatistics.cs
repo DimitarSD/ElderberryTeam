@@ -27,7 +27,7 @@
         {
             this.Hide();
             var form4 = new FormStart();
-            form4.Show();
+            form4.Show(this);
         }
 
         private void FormStatistics_Load(object sender, EventArgs e)
