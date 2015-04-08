@@ -88,7 +88,7 @@
             this.labelEnd.BackColor = System.Drawing.Color.Black;
             this.labelEnd.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.labelEnd.ForeColor = System.Drawing.Color.Yellow;
-            this.labelEnd.Location = new System.Drawing.Point(281, 28);
+            this.labelEnd.Location = new System.Drawing.Point(286, 28);
             this.labelEnd.Name = "labelEnd";
             this.labelEnd.Size = new System.Drawing.Size(66, 15);
             this.labelEnd.TabIndex = 6;
