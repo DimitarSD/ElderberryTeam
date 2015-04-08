@@ -1,132 +1,170 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="TeamElderberryProject.Account" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12.75" Y="0.5" Width="1.5" />
+    <Position X="9.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAEAAAAAgAAAAIAABAAAAAQAAQAAAAgAA=</HashCode>
+      <HashCode>AACAAAAAAAAAEAAAAAgAAAAIAABAAAAAQAAQAABAgAA=</HashCode>
       <FileName>Account.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="TeamElderberryProject.Expense" Collapsed="true">
-    <Position X="4.5" Y="1.75" Width="1.5" />
+  <Class Name="TeamElderberryProject.ExcelExporter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExcelExporter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TeamElderberryProject.ExcelImporter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>ExcelImporter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TeamElderberryProject.Expense" Collapsed="true">
+    <Position X="6" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Expense.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="TeamElderberryProject.ExportInFile" Collapsed="true">
-    <Position X="14.5" Y="0.5" Width="1.5" />
+    <Position X="9.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>ExportInFile.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TeamElderberryProject.ImportFromFile" Collapsed="true">
-    <Position X="16.25" Y="0.5" Width="1.5" />
+  <Class Name="TeamElderberryProject.GlobalMessages" Collapsed="true">
+    <Position X="11.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <HashCode>ACAAACBIAAAAAgAAAAoAAAAAAAAAAAIQAAIIEAABAAA=</HashCode>
+      <FileName>GlobalMessages.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamElderberryProject.ImportFromFile" Collapsed="true">
+    <Position X="13.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ImportFromFile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamElderberryProject.Income" Collapsed="true">
-    <Position X="9" Y="1.75" Width="1.5" />
+    <Position X="1.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Income.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="TeamElderberryProject.InputException" Collapsed="true">
-    <Position X="12.75" Y="1.5" Width="1.5" />
+    <Position X="9.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>InputException.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamElderberryProject.IrregularExpense" Collapsed="true">
-    <Position X="3.5" Y="3.25" Width="1.5" />
+    <Position X="7.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IrregularExpense.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamElderberryProject.IrregularIncome" Collapsed="true">
-    <Position X="8" Y="3.25" Width="1.5" />
+    <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IrregularIncome.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="TeamElderberryProject.JsonExporter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>JsonExporter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
   <Class Name="TeamElderberryProject.RegularExpense" Collapsed="true">
-    <Position X="5.75" Y="3.25" Width="1.5" />
+    <Position X="5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RegularExpense.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TeamElderberryProject.RegularIncome" Collapsed="true">
-    <Position X="10.25" Y="3.25" Width="1.5" />
+    <Position X="2.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RegularIncome.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TeamElderberryProject.Statistics" Collapsed="true">
-    <Position X="14.5" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Statistics.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="TeamElderberryProject.Transaction" Collapsed="true">
-    <Position X="6.75" Y="0.5" Width="1.5" />
+    <Position X="3.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEgAAAgAAAEoAAAACAiAAgAAJEAAAQgAAAAAAA=</HashCode>
+      <HashCode>AAAAAAEgAAAgAAAUoAAAACAiAAgAAJEAAAQgAAAAAAA=</HashCode>
       <FileName>Transaction.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Struct Name="TeamElderberryProject.TransactionData" Collapsed="true">
-    <Position X="12.75" Y="2.75" Width="1.5" />
+    <Position X="9.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAgAABAAAAAQAAAAA=</HashCode>
       <FileName>TransactionData.cs</FileName>
     </TypeIdentifier>
   </Struct>
   <Interface Name="TeamElderberryProject.Interfaces.IAccount" Collapsed="true">
-    <Position X="12.75" Y="4" Width="1.5" />
+    <Position X="9.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IAccount.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="TeamElderberryProject.Interfaces.IExpense" Collapsed="true">
-    <Position X="14.5" Y="4" Width="1.5" />
+    <Position X="11.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IExpense.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="TeamElderberryProject.Interfaces.IExporter" Collapsed="true">
+    <Position X="13.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IExporter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TeamElderberryProject.Interfaces.IImporter" Collapsed="true">
+    <Position X="9.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IImporter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Interface Name="TeamElderberryProject.Interfaces.IIncome" Collapsed="true">
-    <Position X="16.25" Y="4" Width="1.5" />
+    <Position X="11.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IIncome.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="TeamElderberryProject.Interfaces.ITransaction" Collapsed="true">
-    <Position X="12.75" Y="4.75" Width="1.5" />
+    <Position X="13.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAgAAAAABEAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAAAQAAAAAAAgAAAAABEAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\ITransaction.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="TeamElderberryProject.TransactionType" Collapsed="true">
-    <Position X="12.75" Y="5.75" Width="1.5" />
+    <Position X="9.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAAAAKAAAAAAAAAAAAAAACAAAAAAAAAAgAAAE=</HashCode>
+      <HashCode>AAAAAAEAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAE=</HashCode>
       <FileName>TransactionalType.cs</FileName>
     </TypeIdentifier>
   </Enum>
