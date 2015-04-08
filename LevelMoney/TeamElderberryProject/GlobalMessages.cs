@@ -12,5 +12,8 @@
         public const string IncomeTitle = "Incomes";
         public const string ExpenseTitle = "Expenses";
         public const string LoanTitle = "Loans";
+        public const string ExpenseCommentLenghtErrorMessage = "Comment must be less than {0} symbols";
+        public const string EmptyComboBoxErrorMessage = "Please fill the form!";
+        public const string CommentFieldErrorMessage = "Comment field cannot be empty";
     }
 }

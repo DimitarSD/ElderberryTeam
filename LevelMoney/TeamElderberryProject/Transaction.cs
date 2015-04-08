@@ -43,11 +43,6 @@
 
             set
             {
-                if (string.IsNullOrEmpty(value))
-                {
-                    MessageBox.Show(GlobalMessages.ObjectCannotBeNull);
-                }
-
                 this.description = value;
             }
         }

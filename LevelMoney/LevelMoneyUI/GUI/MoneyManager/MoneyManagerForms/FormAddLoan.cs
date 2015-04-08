@@ -45,5 +45,10 @@
             form4.Show(this);
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

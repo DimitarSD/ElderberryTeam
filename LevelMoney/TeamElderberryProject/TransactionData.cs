@@ -24,11 +24,6 @@
 
             private set
             {
-                if (value < 0)
-                {
-                    MessageBox.Show(GlobalMessages.NonNegativeInput);
-                }
-
                 this.amount = value;
             }
         }

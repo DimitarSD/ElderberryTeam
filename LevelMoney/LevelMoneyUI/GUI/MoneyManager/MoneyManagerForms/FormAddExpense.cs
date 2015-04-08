@@ -15,6 +15,9 @@
 
     public partial class FormAddExpense : Form
     {
+        private const int CommentLenghtManimumValue = 30;
+        private const int AmmountMinimumValue = 0;
+
         public FormAddExpense()
         {
             InitializeComponent();
@@ -30,8 +33,6 @@
         private void button1_Click(object sender, EventArgs e)
         {
             var ammount = decimal.Parse(textBox1.Text);
-
-
             var comment = textBox2.Text;
             var date = DateTime.Parse(dateTimePicker1.Text);
 
@@ -54,14 +55,27 @@
             // Only instantiate new JsonExporter/ExcelExporter or anything that implements IExporter
             var exporter = new ExcelExporter();
 
-            ExportInFile.SaveExpenseData(exporter, expense);
+            if (ammount < AmmountMinimumValue)
+            {
+                MessageBox.Show(GlobalMessages.NonNegativeInput, GlobalMessages.ExpenseTitle);
 
-            MessageBox.Show(GlobalMessages.ExpenseAdded, GlobalMessages.ExpenseTitle);
+                textBox1.Clear();
+            }
+            else if (comment == string.Empty)
+            {
+                MessageBox.Show(GlobalMessages.CommentFieldErrorMessage, GlobalMessages.ExpenseTitle);
+            }
+            else
+            {
+                ExportInFile.SaveExpenseData(exporter, expense);
 
-            textBox1.Clear();
-            textBox2.Clear();
-            comboBox1.ResetText();
-            dateTimePicker1.ResetText();
+                MessageBox.Show(GlobalMessages.ExpenseAdded, GlobalMessages.ExpenseTitle);
+
+                textBox1.Clear();
+                textBox2.Clear();
+                comboBox1.ResetText();
+                dateTimePicker1.ResetText();
+            }
 
             //Old way printing with json serializer
             //ExportInFile.SaveExpenseData(expense);
@@ -76,6 +90,26 @@
             this.Hide();
             var form4 = new FormStart();
             form4.Show(this);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            var commentLenght = textBox2.TextLength;
+
+            if (commentLenght > CommentLenghtManimumValue)
+            {
+                string errorMessage = string.Format(GlobalMessages.ExpenseCommentLenghtErrorMessage, CommentLenghtManimumValue);
+                MessageBox.Show(errorMessage, GlobalMessages.ExpenseTitle);
+
+                textBox1.Clear();
+                textBox2.Clear();
+                comboBox1.ResetText();
+                dateTimePicker1.ResetText();
+            }
         }
     }
 }

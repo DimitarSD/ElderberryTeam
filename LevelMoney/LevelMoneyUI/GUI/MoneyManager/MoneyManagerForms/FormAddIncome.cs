@@ -14,6 +14,9 @@
     using TeamElderberryProject.Interfaces;
     public partial class FormAddIncome : Form
     {
+        private const int CommentLenghtManimumValue = 30;
+        private const int AmmountMinimumValue = 0;
+
         public FormAddIncome()
         {
             InitializeComponent();
@@ -29,11 +32,6 @@
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //DialogResult result1 = MessageBox.Show("Are you sure you want to add a new income",
-            //                                                "Caution!",
-            //                                                MessageBoxButtons.YesNo); 
-            //
-
             var ammount = decimal.Parse(textBox1.Text);
             var comment = textBox2.Text;
             var date = DateTime.Parse(dateTimePicker1.Text);
@@ -51,23 +49,34 @@
                 default: MessageBox.Show("Please fill the form!");
                     break;
             }
+
             ExcelExporter exporter = new ExcelExporter();
 
-            exporter.Export(incomeToAdd);
 
+            if (ammount < AmmountMinimumValue)
+            {
+                MessageBox.Show(GlobalMessages.NonNegativeInput, GlobalMessages.ExpenseTitle);
 
+                textBox1.Clear();
+            }
+            else if (comment == string.Empty)
+            {
+                MessageBox.Show(GlobalMessages.CommentFieldErrorMessage, GlobalMessages.ExpenseTitle);
+            }
+            else
+            {
+                exporter.Export(incomeToAdd);
 
-            MessageBox.Show(GlobalMessages.IncomeAdded, GlobalMessages.ExpenseTitle);
+                MessageBox.Show(GlobalMessages.IncomeAdded, GlobalMessages.ExpenseTitle);
 
-            textBox1.Clear();
-            textBox2.Clear();
-            comboBox1.ResetText();
-            dateTimePicker1.ResetText();
+                textBox1.Clear();
+                textBox2.Clear();
+                comboBox1.ResetText();
+                dateTimePicker1.ResetText();
+            }
 
             //Old way printing with json serializer
             //ExportInFile.SaveIncomeData(incomeToAdd);
-
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -83,6 +92,23 @@
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            var commentLenght = textBox2.TextLength;
+
+            if (commentLenght > CommentLenghtManimumValue)
+            {
+                string errorMessage = string.Format(GlobalMessages.ExpenseCommentLenghtErrorMessage, CommentLenghtManimumValue);
+                MessageBox.Show(errorMessage, GlobalMessages.ExpenseTitle);
+
+                textBox2.Clear();
+            }
         }
     }
 }
