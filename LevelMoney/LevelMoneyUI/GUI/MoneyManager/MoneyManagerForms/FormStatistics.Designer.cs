@@ -73,7 +73,7 @@
             // labelStart
             // 
             this.labelStart.AutoSize = true;
-            this.labelStart.BackColor = System.Drawing.Color.DarkCyan;
+            this.labelStart.BackColor = System.Drawing.Color.Black;
             this.labelStart.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.labelStart.ForeColor = System.Drawing.Color.Yellow;
             this.labelStart.Location = new System.Drawing.Point(69, 28);
@@ -85,7 +85,7 @@
             // labelEnd
             // 
             this.labelEnd.AutoSize = true;
-            this.labelEnd.BackColor = System.Drawing.Color.DarkCyan;
+            this.labelEnd.BackColor = System.Drawing.Color.Black;
             this.labelEnd.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.labelEnd.ForeColor = System.Drawing.Color.Yellow;
             this.labelEnd.Location = new System.Drawing.Point(281, 28);
