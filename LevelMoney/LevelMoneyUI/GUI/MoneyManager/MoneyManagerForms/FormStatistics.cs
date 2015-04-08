@@ -35,11 +35,11 @@
             this.Location = this.Owner.Location;
             this.Left += this.Owner.ClientSize.Width / 2 - this.Width / 2;
             this.Top += this.Owner.ClientSize.Height / 2 - this.Height / 2;
-            
+
             var today = DateTime.Now;
             datePickerStart.Value = new DateTime(today.Year, today.Month, 1);
             datePickerEnd.Value = new DateTime(today.Year, today.Month, DateTime.DaysInMonth(today.Year, today.Month));
-           
+
             var startDate = datePickerStart.Value;
             var endDate = datePickerEnd.Value;
             var currentAccount = Account.Instance;
@@ -49,7 +49,7 @@
             {
                 currentAccount.AddTransaction(transaction);
             }
-            labelTotalMoney.Text = string.Format("Your current money: {0}",currentAccount.Balance);
+            labelTotalMoney.Text = string.Format("Your current money: {0}", currentAccount.Balance);
             ChangeTextbox(datePickerStart.Value, datePickerEnd.Value, TransactionType.RegularIncome, StatisticsTextBox);
             ChangeTextbox(datePickerStart.Value, datePickerEnd.Value, TransactionType.IrregularIncome, StatisticsTextBox);
             ChangeTextbox(datePickerStart.Value, datePickerEnd.Value, TransactionType.RegularExpense, StatisticsTextBox);
@@ -99,6 +99,15 @@
             ChangeTextbox(datePickerStart.Value, datePickerEnd.Value, TransactionType.IrregularExpense, StatisticsTextBox);
             CheckIfEmpty(datePickerStart.Value, datePickerEnd.Value, TransactionType.IrregularExpense.ToString(), StatisticsTextBox);
         }
+        private void buttonAll_Click(object sender, EventArgs e)
+        {
+            StatisticsTextBox.Clear();
+            ChangeTextbox(datePickerStart.Value, datePickerEnd.Value, TransactionType.RegularIncome, StatisticsTextBox);
+            ChangeTextbox(datePickerStart.Value, datePickerEnd.Value, TransactionType.IrregularIncome, StatisticsTextBox);
+            ChangeTextbox(datePickerStart.Value, datePickerEnd.Value, TransactionType.RegularExpense, StatisticsTextBox);
+            ChangeTextbox(datePickerStart.Value, datePickerEnd.Value, TransactionType.IrregularExpense, StatisticsTextBox);
+            CheckIfEmpty(datePickerStart.Value, datePickerEnd.Value, "Transaction", StatisticsTextBox);
+        }
         private void PrintTransaction(ITransaction transaction, RichTextBox textBox)
         {
             switch (transaction.TransactionType)
@@ -108,7 +117,7 @@
                 case TransactionType.RegularExpense: textBox.SelectionColor = Color.Orange; break;
                 case TransactionType.IrregularExpense: textBox.SelectionColor = Color.Red; break;
             }
-            textBox.AppendText(string.Format("{0}\n", transaction));
+            textBox.AppendText(string.Format("{0}\n\n", transaction));
         }
         private void ChangeTextbox(DateTime startDate, DateTime endDate, TransactionType type, RichTextBox textBox)
         {
@@ -129,16 +138,6 @@
                 textBox.SelectionColor = Color.Yellow;
                 textBox.AppendText(string.Format("You have no {0}s from {1} to {2}.", type, startDate.ToShortDateString(), endDate.ToShortDateString()));
             }
-        }
-
-        private void buttonAll_Click(object sender, EventArgs e)
-        {
-            StatisticsTextBox.Clear();
-            ChangeTextbox(datePickerStart.Value, datePickerEnd.Value, TransactionType.RegularIncome, StatisticsTextBox);
-            ChangeTextbox(datePickerStart.Value, datePickerEnd.Value, TransactionType.IrregularIncome, StatisticsTextBox);
-            ChangeTextbox(datePickerStart.Value, datePickerEnd.Value, TransactionType.RegularExpense, StatisticsTextBox);
-            ChangeTextbox(datePickerStart.Value, datePickerEnd.Value, TransactionType.IrregularExpense, StatisticsTextBox);
-            CheckIfEmpty(datePickerStart.Value, datePickerEnd.Value, "Transaction", StatisticsTextBox);
         }
     }
 }

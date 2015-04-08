@@ -47,11 +47,11 @@
             // StatisticsTextBox
             // 
             this.StatisticsTextBox.BackColor = System.Drawing.Color.Black;
-            this.StatisticsTextBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.StatisticsTextBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.StatisticsTextBox.ForeColor = System.Drawing.Color.Yellow;
-            this.StatisticsTextBox.Location = new System.Drawing.Point(12, 59);
+            this.StatisticsTextBox.Location = new System.Drawing.Point(12, 49);
             this.StatisticsTextBox.Name = "StatisticsTextBox";
-            this.StatisticsTextBox.Size = new System.Drawing.Size(760, 422);
+            this.StatisticsTextBox.Size = new System.Drawing.Size(760, 457);
             this.StatisticsTextBox.TabIndex = 2;
             this.StatisticsTextBox.Text = "";
             // 
@@ -73,10 +73,11 @@
             // 
             this.labelStart.AutoSize = true;
             this.labelStart.BackColor = System.Drawing.Color.DarkCyan;
+            this.labelStart.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.labelStart.ForeColor = System.Drawing.Color.Yellow;
-            this.labelStart.Location = new System.Drawing.Point(49, 28);
+            this.labelStart.Location = new System.Drawing.Point(69, 28);
             this.labelStart.Name = "labelStart";
-            this.labelStart.Size = new System.Drawing.Size(55, 13);
+            this.labelStart.Size = new System.Drawing.Size(74, 15);
             this.labelStart.TabIndex = 5;
             this.labelStart.Text = "Start Date";
             // 
@@ -84,81 +85,107 @@
             // 
             this.labelEnd.AutoSize = true;
             this.labelEnd.BackColor = System.Drawing.Color.DarkCyan;
+            this.labelEnd.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.labelEnd.ForeColor = System.Drawing.Color.Yellow;
-            this.labelEnd.Location = new System.Drawing.Point(268, 28);
+            this.labelEnd.Location = new System.Drawing.Point(281, 28);
             this.labelEnd.Name = "labelEnd";
-            this.labelEnd.Size = new System.Drawing.Size(52, 13);
+            this.labelEnd.Size = new System.Drawing.Size(66, 15);
             this.labelEnd.TabIndex = 6;
             this.labelEnd.Text = "End Date";
             // 
             // buttonExpenses
             // 
-            this.buttonExpenses.Location = new System.Drawing.Point(427, 527);
+            this.buttonExpenses.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonExpenses.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.buttonExpenses.ForeColor = System.Drawing.Color.Yellow;
+            this.buttonExpenses.Location = new System.Drawing.Point(330, 512);
             this.buttonExpenses.Name = "buttonExpenses";
-            this.buttonExpenses.Size = new System.Drawing.Size(75, 23);
+            this.buttonExpenses.Size = new System.Drawing.Size(100, 40);
             this.buttonExpenses.TabIndex = 7;
             this.buttonExpenses.Text = "Expenses";
-            this.buttonExpenses.UseVisualStyleBackColor = true;
+            this.buttonExpenses.UseVisualStyleBackColor = false;
             this.buttonExpenses.Click += new System.EventHandler(this.buttonExpenses_Click);
             // 
             // buttonIncomes
             // 
-            this.buttonIncomes.Location = new System.Drawing.Point(12, 521);
+            this.buttonIncomes.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonIncomes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonIncomes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.buttonIncomes.ForeColor = System.Drawing.Color.Yellow;
+            this.buttonIncomes.Location = new System.Drawing.Point(12, 512);
             this.buttonIncomes.Name = "buttonIncomes";
-            this.buttonIncomes.Size = new System.Drawing.Size(75, 34);
+            this.buttonIncomes.Size = new System.Drawing.Size(100, 40);
             this.buttonIncomes.TabIndex = 8;
             this.buttonIncomes.Text = "Incomes";
-            this.buttonIncomes.UseVisualStyleBackColor = true;
+            this.buttonIncomes.UseVisualStyleBackColor = false;
             this.buttonIncomes.Click += new System.EventHandler(this.buttonIncomes_Click);
             // 
             // buttonRegularIncomes
             // 
-            this.buttonRegularIncomes.Location = new System.Drawing.Point(93, 521);
+            this.buttonRegularIncomes.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonRegularIncomes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRegularIncomes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.buttonRegularIncomes.ForeColor = System.Drawing.Color.Yellow;
+            this.buttonRegularIncomes.Location = new System.Drawing.Point(118, 512);
             this.buttonRegularIncomes.Name = "buttonRegularIncomes";
-            this.buttonRegularIncomes.Size = new System.Drawing.Size(75, 34);
+            this.buttonRegularIncomes.Size = new System.Drawing.Size(100, 40);
             this.buttonRegularIncomes.TabIndex = 9;
             this.buttonRegularIncomes.Text = "Regular Incomes";
-            this.buttonRegularIncomes.UseVisualStyleBackColor = true;
+            this.buttonRegularIncomes.UseVisualStyleBackColor = false;
             this.buttonRegularIncomes.Click += new System.EventHandler(this.buttonRegularIncomes_Click);
             // 
             // buttonIrregularIncomes
             // 
-            this.buttonIrregularIncomes.Location = new System.Drawing.Point(174, 521);
+            this.buttonIrregularIncomes.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonIrregularIncomes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonIrregularIncomes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.buttonIrregularIncomes.ForeColor = System.Drawing.Color.Yellow;
+            this.buttonIrregularIncomes.Location = new System.Drawing.Point(224, 512);
             this.buttonIrregularIncomes.Name = "buttonIrregularIncomes";
-            this.buttonIrregularIncomes.Size = new System.Drawing.Size(75, 34);
+            this.buttonIrregularIncomes.Size = new System.Drawing.Size(100, 40);
             this.buttonIrregularIncomes.TabIndex = 10;
             this.buttonIrregularIncomes.Text = "Irregular Incomes";
-            this.buttonIrregularIncomes.UseVisualStyleBackColor = true;
+            this.buttonIrregularIncomes.UseVisualStyleBackColor = false;
             this.buttonIrregularIncomes.Click += new System.EventHandler(this.buttonIrregularIncomes_Click);
             // 
             // buttonRegularExpenses
             // 
-            this.buttonRegularExpenses.Location = new System.Drawing.Point(508, 521);
+            this.buttonRegularExpenses.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonRegularExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRegularExpenses.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.buttonRegularExpenses.ForeColor = System.Drawing.Color.Yellow;
+            this.buttonRegularExpenses.Location = new System.Drawing.Point(436, 512);
             this.buttonRegularExpenses.Name = "buttonRegularExpenses";
-            this.buttonRegularExpenses.Size = new System.Drawing.Size(75, 34);
+            this.buttonRegularExpenses.Size = new System.Drawing.Size(100, 40);
             this.buttonRegularExpenses.TabIndex = 11;
             this.buttonRegularExpenses.Text = "Regular Expenses";
-            this.buttonRegularExpenses.UseVisualStyleBackColor = true;
+            this.buttonRegularExpenses.UseVisualStyleBackColor = false;
             this.buttonRegularExpenses.Click += new System.EventHandler(this.buttonRegularExpenses_Click);
             // 
             // buttonIrregularExpenses
             // 
-            this.buttonIrregularExpenses.Location = new System.Drawing.Point(589, 521);
+            this.buttonIrregularExpenses.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonIrregularExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonIrregularExpenses.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonIrregularExpenses.ForeColor = System.Drawing.Color.Yellow;
+            this.buttonIrregularExpenses.Location = new System.Drawing.Point(542, 512);
             this.buttonIrregularExpenses.Name = "buttonIrregularExpenses";
-            this.buttonIrregularExpenses.Size = new System.Drawing.Size(75, 34);
+            this.buttonIrregularExpenses.Size = new System.Drawing.Size(100, 40);
             this.buttonIrregularExpenses.TabIndex = 12;
             this.buttonIrregularExpenses.Text = "Irregular Expenses";
-            this.buttonIrregularExpenses.UseVisualStyleBackColor = true;
+            this.buttonIrregularExpenses.UseVisualStyleBackColor = false;
             this.buttonIrregularExpenses.Click += new System.EventHandler(this.buttonIrregularExpenses_Click);
             // 
             // labelTotalMoney
             // 
             this.labelTotalMoney.AutoSize = true;
-            this.labelTotalMoney.BackColor = System.Drawing.Color.DarkCyan;
+            this.labelTotalMoney.BackColor = System.Drawing.Color.Black;
+            this.labelTotalMoney.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.labelTotalMoney.ForeColor = System.Drawing.Color.Yellow;
-            this.labelTotalMoney.Location = new System.Drawing.Point(632, 9);
+            this.labelTotalMoney.Location = new System.Drawing.Point(530, 3);
             this.labelTotalMoney.Name = "labelTotalMoney";
-            this.labelTotalMoney.Size = new System.Drawing.Size(102, 13);
+            this.labelTotalMoney.Size = new System.Drawing.Size(139, 15);
             this.labelTotalMoney.TabIndex = 13;
             this.labelTotalMoney.Text = "Your current money:";
             // 
@@ -166,10 +193,11 @@
             // 
             this.button2.BackColor = System.Drawing.Color.DarkCyan;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(672, 530);
+            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.button2.ForeColor = System.Drawing.Color.Yellow;
+            this.button2.Location = new System.Drawing.Point(672, 512);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 25);
+            this.button2.Size = new System.Drawing.Size(100, 40);
             this.button2.TabIndex = 14;
             this.button2.Text = "Back to main";
             this.button2.UseVisualStyleBackColor = false;
@@ -177,12 +205,16 @@
             // 
             // buttonAll
             // 
-            this.buttonAll.Location = new System.Drawing.Point(343, 527);
+            this.buttonAll.BackColor = System.Drawing.Color.DarkCyan;
+            this.buttonAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAll.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.buttonAll.ForeColor = System.Drawing.Color.Yellow;
+            this.buttonAll.Location = new System.Drawing.Point(424, 3);
             this.buttonAll.Name = "buttonAll";
-            this.buttonAll.Size = new System.Drawing.Size(75, 23);
+            this.buttonAll.Size = new System.Drawing.Size(100, 40);
             this.buttonAll.TabIndex = 15;
             this.buttonAll.Text = "All";
-            this.buttonAll.UseVisualStyleBackColor = true;
+            this.buttonAll.UseVisualStyleBackColor = false;
             this.buttonAll.Click += new System.EventHandler(this.buttonAll_Click);
             // 
             // FormStatistics
