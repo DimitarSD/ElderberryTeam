@@ -98,6 +98,7 @@
             this.buttonExpenses.TabIndex = 7;
             this.buttonExpenses.Text = "Expenses";
             this.buttonExpenses.UseVisualStyleBackColor = true;
+            this.buttonExpenses.Click += new System.EventHandler(this.buttonExpenses_Click);
             // 
             // buttonIncomes
             // 
@@ -107,6 +108,7 @@
             this.buttonIncomes.TabIndex = 8;
             this.buttonIncomes.Text = "Incomes";
             this.buttonIncomes.UseVisualStyleBackColor = true;
+            this.buttonIncomes.Click += new System.EventHandler(this.buttonIncomes_Click);
             // 
             // buttonRegularIncomes
             // 
@@ -116,6 +118,7 @@
             this.buttonRegularIncomes.TabIndex = 9;
             this.buttonRegularIncomes.Text = "Regular Incomes";
             this.buttonRegularIncomes.UseVisualStyleBackColor = true;
+            this.buttonRegularIncomes.Click += new System.EventHandler(this.buttonRegularIncomes_Click);
             // 
             // buttonIrregularIncomes
             // 
@@ -125,6 +128,7 @@
             this.buttonIrregularIncomes.TabIndex = 10;
             this.buttonIrregularIncomes.Text = "Irregular Incomes";
             this.buttonIrregularIncomes.UseVisualStyleBackColor = true;
+            this.buttonIrregularIncomes.Click += new System.EventHandler(this.buttonIrregularIncomes_Click);
             // 
             // buttonRegularExpenses
             // 
@@ -134,6 +138,7 @@
             this.buttonRegularExpenses.TabIndex = 11;
             this.buttonRegularExpenses.Text = "Regular Expenses";
             this.buttonRegularExpenses.UseVisualStyleBackColor = true;
+            this.buttonRegularExpenses.Click += new System.EventHandler(this.buttonRegularExpenses_Click);
             // 
             // buttonIrregularExpenses
             // 
@@ -143,6 +148,7 @@
             this.buttonIrregularExpenses.TabIndex = 12;
             this.buttonIrregularExpenses.Text = "Regular Expenses";
             this.buttonIrregularExpenses.UseVisualStyleBackColor = true;
+            this.buttonIrregularExpenses.Click += new System.EventHandler(this.buttonIrregularExpenses_Click);
             // 
             // labelTotalMoney
             // 

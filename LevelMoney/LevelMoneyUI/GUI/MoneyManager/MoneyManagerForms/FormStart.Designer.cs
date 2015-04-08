@@ -60,10 +60,10 @@
             this.button1.BackColor = System.Drawing.Color.DarkCyan;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(45, 264);
+            this.button1.ForeColor = System.Drawing.Color.Yellow;
+            this.button1.Location = new System.Drawing.Point(12, 509);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.Size = new System.Drawing.Size(100, 41);
             this.button1.TabIndex = 2;
             this.button1.Text = "Add Income";
             this.button1.UseVisualStyleBackColor = false;
@@ -74,10 +74,10 @@
             this.button2.BackColor = System.Drawing.Color.DarkCyan;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(155, 264);
+            this.button2.ForeColor = System.Drawing.Color.Yellow;
+            this.button2.Location = new System.Drawing.Point(199, 509);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 23);
+            this.button2.Size = new System.Drawing.Size(100, 41);
             this.button2.TabIndex = 3;
             this.button2.Text = "Add Expense";
             this.button2.UseVisualStyleBackColor = false;
@@ -88,10 +88,10 @@
             this.button3.BackColor = System.Drawing.Color.DarkCyan;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(265, 264);
+            this.button3.ForeColor = System.Drawing.Color.Yellow;
+            this.button3.Location = new System.Drawing.Point(320, 499);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 23);
+            this.button3.Size = new System.Drawing.Size(100, 41);
             this.button3.TabIndex = 4;
             this.button3.Text = "Add Loan";
             this.button3.UseVisualStyleBackColor = false;
@@ -123,11 +123,11 @@
             // 
             this.button4.BackColor = System.Drawing.Color.DarkCyan;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(375, 264);
+            this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.ForeColor = System.Drawing.Color.Yellow;
+            this.button4.Location = new System.Drawing.Point(672, 509);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 23);
+            this.button4.Size = new System.Drawing.Size(100, 41);
             this.button4.TabIndex = 7;
             this.button4.Text = "Exit";
             this.button4.UseVisualStyleBackColor = false;
@@ -138,10 +138,10 @@
             this.button5.BackColor = System.Drawing.Color.DarkCyan;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(375, 235);
+            this.button5.ForeColor = System.Drawing.Color.Yellow;
+            this.button5.Location = new System.Drawing.Point(505, 509);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 23);
+            this.button5.Size = new System.Drawing.Size(100, 41);
             this.button5.TabIndex = 9;
             this.button5.Text = "Statistics";
             this.button5.UseVisualStyleBackColor = false;
@@ -156,7 +156,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(333, 88);
+            this.textBox1.Size = new System.Drawing.Size(731, 303);
             this.textBox1.TabIndex = 10;
             // 
             // FormStart

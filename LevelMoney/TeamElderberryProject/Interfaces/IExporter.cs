@@ -1,7 +1,5 @@
-﻿namespace TeamElderberryProject
+﻿namespace TeamElderberryProject.Interfaces
 {
-    using TeamElderberryProject.Interfaces;
-
     public interface IExporter
     {
         void Export(ITransaction transaction);
