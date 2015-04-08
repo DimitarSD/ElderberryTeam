@@ -8,8 +8,8 @@
     {
         // Implements Singleton design pattern with lazy loading
         private static readonly Account instance = new Account();
-        private ICollection<ITransaction> transactions = new List<ITransaction>();
-        private decimal balance;
+        private IList<ITransaction> transactions = new List<ITransaction>();
+        private decimal balance = 0;
 
         private Account()
         {
@@ -37,7 +37,7 @@
             }
         }
 
-        public ICollection<ITransaction> Transactions
+        public IList<ITransaction> Transactions
         {
             get { return this.transactions; }
         }
@@ -51,7 +51,7 @@
         {
             foreach (var transaction in this.transactions)
             {
-                this.Balance += transaction.BalanceValue();
+                this.balance += transaction.BalanceValue();
             }
         }
     }

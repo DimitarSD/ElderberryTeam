@@ -6,7 +6,7 @@
 
     public static class ImportFromFile
     {
-        public static ICollection<ITransaction> ImportData(IImporter importer)
+        public static IList<ITransaction> ImportData(IImporter importer)
         {
             return importer.Import();
         }

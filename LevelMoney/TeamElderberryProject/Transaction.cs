@@ -13,7 +13,7 @@
     {
         private const int IdLength = 10;
         private const string IdChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "123456789";
-        private const string TransanctionStringFormat = "Type: {0} | Date: {1} | Amount: {2} | Description: {3}";
+        private const string TransanctionStringFormat = "Type: {0,16} | Date: {1} | Amount: {2,10:0.00} | Description: {3,-43} |";
 
         private static readonly Random random = new Random();
 

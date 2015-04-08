@@ -6,7 +6,7 @@
     {
         decimal Balance { get; }
 
-        ICollection<ITransaction> Transactions { get; }
+        IList<ITransaction> Transactions { get; }
 
         void AddTransaction(ITransaction transaction);
     }
