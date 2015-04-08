@@ -20,7 +20,7 @@
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonIncome_Click(object sender, EventArgs e)
         {
             this.Hide();
             var form2 = new FormAddIncome();
@@ -28,21 +28,14 @@
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonExpense_Click(object sender, EventArgs e)
         {
             this.Hide();
             var form3 = new FormAddExpense();
             form3.Show(this);
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form4 = new FormAddLoan();
-            form4.Show(this);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonExit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
@@ -70,7 +63,7 @@
             Environment.Exit(0);
         }
 
-        private void button5_Click_1(object sender, EventArgs e)
+        private void buttonStatistics_Click(object sender, EventArgs e)
         {
             this.Hide();
             var form5 = new FormStatistics();

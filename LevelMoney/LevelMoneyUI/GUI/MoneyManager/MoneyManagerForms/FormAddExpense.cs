@@ -30,16 +30,16 @@
             this.Top += this.Owner.ClientSize.Height / 2 - this.Height / 2;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonConfirm_Click(object sender, EventArgs e)
         {
-            var ammount = decimal.Parse(textBox1.Text);
-            var comment = textBox2.Text;
+            var ammount = decimal.Parse(boxMoney.Text);
+            var comment = boxComment.Text;
             var date = DateTime.Parse(dateTimePicker1.Text);
 
             Expense expense = null;
 
 
-            switch (comboBox1.Text)
+            switch (dropTypes.Text)
             {
                 case "Irregular":
                     expense = new IrregularExpense(new TransactionData(ammount, date), comment);
@@ -59,7 +59,7 @@
             {
                 MessageBox.Show(GlobalMessages.NonNegativeInput, GlobalMessages.ExpenseTitle);
 
-                textBox1.Clear();
+                boxMoney.Clear();
             }
             else if (comment == string.Empty)
             {
@@ -71,9 +71,9 @@
 
                 MessageBox.Show(GlobalMessages.ExpenseAdded, GlobalMessages.ExpenseTitle);
 
-                textBox1.Clear();
-                textBox2.Clear();
-                comboBox1.ResetText();
+                boxMoney.Clear();
+                boxComment.Clear();
+                dropTypes.ResetText();
                 dateTimePicker1.ResetText();
             }
 
@@ -85,29 +85,25 @@
             Environment.Exit(0);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             var form4 = new FormStart();
             form4.Show(this);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void boxComment_TextChanged(object sender, EventArgs e)
         {
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            var commentLenght = textBox2.TextLength;
+            var commentLenght = boxComment.TextLength;
 
             if (commentLenght > CommentLenghtManimumValue)
             {
                 string errorMessage = string.Format(GlobalMessages.ExpenseCommentLenghtErrorMessage, CommentLenghtManimumValue);
                 MessageBox.Show(errorMessage, GlobalMessages.ExpenseTitle);
 
-                textBox1.Clear();
-                textBox2.Clear();
-                comboBox1.ResetText();
+                boxMoney.Clear();
+                boxComment.Clear();
+                dropTypes.ResetText();
                 dateTimePicker1.ResetText();
             }
         }
