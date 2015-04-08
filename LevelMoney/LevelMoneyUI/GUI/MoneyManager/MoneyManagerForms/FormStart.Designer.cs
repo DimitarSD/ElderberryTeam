@@ -123,7 +123,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.DarkCyan;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button4.ForeColor = System.Drawing.Color.Yellow;
             this.button4.Location = new System.Drawing.Point(672, 509);
             this.button4.Name = "button4";

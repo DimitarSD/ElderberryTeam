@@ -41,6 +41,7 @@
             this.buttonIrregularExpenses = new System.Windows.Forms.Button();
             this.labelTotalMoney = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.buttonAll = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // StatisticsTextBox
@@ -48,7 +49,7 @@
             this.StatisticsTextBox.BackColor = System.Drawing.Color.Black;
             this.StatisticsTextBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.StatisticsTextBox.ForeColor = System.Drawing.Color.Yellow;
-            this.StatisticsTextBox.Location = new System.Drawing.Point(12, 33);
+            this.StatisticsTextBox.Location = new System.Drawing.Point(12, 59);
             this.StatisticsTextBox.Name = "StatisticsTextBox";
             this.StatisticsTextBox.Size = new System.Drawing.Size(760, 422);
             this.StatisticsTextBox.TabIndex = 2;
@@ -56,14 +57,14 @@
             // 
             // datePickerStart
             // 
-            this.datePickerStart.Location = new System.Drawing.Point(12, 461);
+            this.datePickerStart.Location = new System.Drawing.Point(12, 3);
             this.datePickerStart.Name = "datePickerStart";
             this.datePickerStart.Size = new System.Drawing.Size(200, 20);
             this.datePickerStart.TabIndex = 3;
             // 
             // datePickerEnd
             // 
-            this.datePickerEnd.Location = new System.Drawing.Point(218, 461);
+            this.datePickerEnd.Location = new System.Drawing.Point(218, 3);
             this.datePickerEnd.Name = "datePickerEnd";
             this.datePickerEnd.Size = new System.Drawing.Size(200, 20);
             this.datePickerEnd.TabIndex = 4;
@@ -73,7 +74,7 @@
             this.labelStart.AutoSize = true;
             this.labelStart.BackColor = System.Drawing.Color.DarkCyan;
             this.labelStart.ForeColor = System.Drawing.Color.Yellow;
-            this.labelStart.Location = new System.Drawing.Point(49, 486);
+            this.labelStart.Location = new System.Drawing.Point(49, 28);
             this.labelStart.Name = "labelStart";
             this.labelStart.Size = new System.Drawing.Size(55, 13);
             this.labelStart.TabIndex = 5;
@@ -84,7 +85,7 @@
             this.labelEnd.AutoSize = true;
             this.labelEnd.BackColor = System.Drawing.Color.DarkCyan;
             this.labelEnd.ForeColor = System.Drawing.Color.Yellow;
-            this.labelEnd.Location = new System.Drawing.Point(268, 486);
+            this.labelEnd.Location = new System.Drawing.Point(268, 28);
             this.labelEnd.Name = "labelEnd";
             this.labelEnd.Size = new System.Drawing.Size(52, 13);
             this.labelEnd.TabIndex = 6;
@@ -102,9 +103,9 @@
             // 
             // buttonIncomes
             // 
-            this.buttonIncomes.Location = new System.Drawing.Point(12, 527);
+            this.buttonIncomes.Location = new System.Drawing.Point(12, 521);
             this.buttonIncomes.Name = "buttonIncomes";
-            this.buttonIncomes.Size = new System.Drawing.Size(75, 23);
+            this.buttonIncomes.Size = new System.Drawing.Size(75, 34);
             this.buttonIncomes.TabIndex = 8;
             this.buttonIncomes.Text = "Incomes";
             this.buttonIncomes.UseVisualStyleBackColor = true;
@@ -146,7 +147,7 @@
             this.buttonIrregularExpenses.Name = "buttonIrregularExpenses";
             this.buttonIrregularExpenses.Size = new System.Drawing.Size(75, 34);
             this.buttonIrregularExpenses.TabIndex = 12;
-            this.buttonIrregularExpenses.Text = "Regular Expenses";
+            this.buttonIrregularExpenses.Text = "Irregular Expenses";
             this.buttonIrregularExpenses.UseVisualStyleBackColor = true;
             this.buttonIrregularExpenses.Click += new System.EventHandler(this.buttonIrregularExpenses_Click);
             // 
@@ -155,10 +156,11 @@
             this.labelTotalMoney.AutoSize = true;
             this.labelTotalMoney.BackColor = System.Drawing.Color.DarkCyan;
             this.labelTotalMoney.ForeColor = System.Drawing.Color.Yellow;
-            this.labelTotalMoney.Location = new System.Drawing.Point(383, 9);
+            this.labelTotalMoney.Location = new System.Drawing.Point(632, 9);
             this.labelTotalMoney.Name = "labelTotalMoney";
-            this.labelTotalMoney.Size = new System.Drawing.Size(0, 13);
+            this.labelTotalMoney.Size = new System.Drawing.Size(102, 13);
             this.labelTotalMoney.TabIndex = 13;
+            this.labelTotalMoney.Text = "Your current money:";
             // 
             // button2
             // 
@@ -173,12 +175,23 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
+            // buttonAll
+            // 
+            this.buttonAll.Location = new System.Drawing.Point(343, 527);
+            this.buttonAll.Name = "buttonAll";
+            this.buttonAll.Size = new System.Drawing.Size(75, 23);
+            this.buttonAll.TabIndex = 15;
+            this.buttonAll.Text = "All";
+            this.buttonAll.UseVisualStyleBackColor = true;
+            this.buttonAll.Click += new System.EventHandler(this.buttonAll_Click);
+            // 
             // FormStatistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(784, 562);
+            this.Controls.Add(this.buttonAll);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.labelTotalMoney);
             this.Controls.Add(this.buttonIrregularExpenses);
@@ -215,6 +228,7 @@
         private System.Windows.Forms.Button buttonIrregularExpenses;
         private System.Windows.Forms.Label labelTotalMoney;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonAll;
 
     }
 }
