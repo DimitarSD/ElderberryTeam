@@ -34,10 +34,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,16 +108,6 @@
             this.label1.Text = "Must Pay Bills:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(29, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(363, 84);
-            this.label2.TabIndex = 6;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -159,15 +149,28 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.MenuText;
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Info;
+            this.textBox1.Location = new System.Drawing.Point(32, 170);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(333, 88);
+            this.textBox1.TabIndex = 10;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // FormStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(524, 321);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -182,6 +185,7 @@
             this.Load += new System.EventHandler(this.FormStart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -193,9 +197,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

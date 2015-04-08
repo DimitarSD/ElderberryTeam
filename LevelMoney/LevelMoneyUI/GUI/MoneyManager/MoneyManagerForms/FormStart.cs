@@ -54,15 +54,15 @@
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            label2.ResetText();
-            ListAllExpenses(dateTimePicker1.Value, label2);
+            textBox1.ResetText();
+            ListAllExpenses(dateTimePicker1.Value, textBox1);
         }
 
         private void FormStart_Load(object sender, EventArgs e)
         {
             var importer = new ExcelImporter();
             allTransactions = ImportFromFile.ImportData(importer);
-            ListAllExpenses(DateTime.Now, label2);
+            ListAllExpenses(DateTime.Now, textBox1);
 
 
         }
@@ -93,24 +93,31 @@
             form5.Show();
         }
 
-        private static void ListAllExpenses(DateTime date, Control label)
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private static void ListAllExpenses(DateTime date, TextBox container)
         {
             var allExpenses = allTransactions.Where(t => t.Data.Date.Date == date.Date && t is Expense).ToList();
 
             if (allExpenses.Count > 0)
             {
-                label.Text = string.Format("{0} {1} for this date:\n",
+                container.AppendText(string.Format("{0} {1} for this date:",
                     allExpenses.Count,
-                    allExpenses.Count == 1 ? "expense" : "expenses");
+                    allExpenses.Count == 1 ? "expense" : "expenses"));
+                container.AppendText(Environment.NewLine);
 
                 foreach (var expense in allExpenses)
                 {
-                    label.Text += expense.ToString() + Environment.NewLine;
+                    container.AppendText(expense.ToString());
+                    container.AppendText(Environment.NewLine);
                 }
             }
             else
             {
-                label.Text = "No expenses for this date.";
+                container.Text = "No expenses for this date.";
             }
         }
     }
