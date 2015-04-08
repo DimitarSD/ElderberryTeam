@@ -21,13 +21,11 @@
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            this.Location = this.Owner.Location;
+            this.Left += this.Owner.ClientSize.Width / 2 - this.Width / 2;
+            this.Top += this.Owner.ClientSize.Height / 2 - this.Height / 2;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -72,21 +70,6 @@
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             //MoreActions form2 = new MoreActions();
@@ -95,16 +78,11 @@
 
             this.Hide();
             var form4 = new FormStart();
-            form4.Show();
+            form4.Show(this);
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             Environment.Exit(0);
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

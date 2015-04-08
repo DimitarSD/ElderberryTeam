@@ -169,7 +169,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MoneyManagerForms.Properties.Resources.loans;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(389, 284);
+            this.ClientSize = new System.Drawing.Size(784, 562);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker2);
@@ -183,6 +183,7 @@
             this.Controls.Add(this.radioButton1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAddLoan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Loan";
             this.Load += new System.EventHandler(this.FormAddLoan_Load);
             this.ResumeLayout(false);

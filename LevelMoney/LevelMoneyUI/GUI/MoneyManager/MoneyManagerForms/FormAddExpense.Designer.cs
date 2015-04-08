@@ -67,7 +67,6 @@
             this.label1.Size = new System.Drawing.Size(107, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Expense type:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -80,7 +79,6 @@
             this.label2.Size = new System.Drawing.Size(44, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Sum:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -124,7 +122,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 6;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox1
             // 
@@ -160,7 +157,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::MoneyManagerForms.Properties.Resources.in_god_we_trust_coin_wallpapers;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(450, 361);
+            this.ClientSize = new System.Drawing.Size(784, 562);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -175,7 +172,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAddExpense";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Expense";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);

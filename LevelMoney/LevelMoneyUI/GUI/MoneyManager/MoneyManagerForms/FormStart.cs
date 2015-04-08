@@ -20,16 +20,11 @@
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             var form2 = new FormAddIncome();
-            form2.Show();
+            form2.Show(this);
 
         }
 
@@ -37,14 +32,14 @@
         {
             this.Hide();
             var form3 = new FormAddExpense();
-            form3.Show();
+            form3.Show(this);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
             var form4 = new FormAddLoan();
-            form4.Show();
+            form4.Show(this);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -60,42 +55,26 @@
 
         private void FormStart_Load(object sender, EventArgs e)
         {
+            if (this.Owner != null)
+            {
+                this.Location = this.Owner.Location;
+                this.Left += this.Owner.ClientSize.Width / 2 - this.Width / 2;
+                this.Top += this.Owner.ClientSize.Height / 2 - this.Height / 2;
+            }
             var importer = new ExcelImporter();
             allTransactions = ImportFromFile.ImportData(importer);
             ListAllExpenses(DateTime.Now, textBox1);
-
-
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             Environment.Exit(0);
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button5_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             var form5 = new FormStatistics();
-            form5.Show();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            form5.Show(this);
         }
 
         private static void ListAllExpenses(DateTime date, TextBox container)

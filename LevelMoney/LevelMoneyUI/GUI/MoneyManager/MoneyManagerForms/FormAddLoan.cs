@@ -29,7 +29,9 @@
 
         private void FormAddLoan_Load(object sender, EventArgs e)
         {
-
+            this.Location = this.Owner.Location;
+            this.Left += this.Owner.ClientSize.Width / 2 - this.Width / 2;
+            this.Top += this.Owner.ClientSize.Height / 2 - this.Height / 2;
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
@@ -40,7 +42,7 @@
         {
             this.Hide();
             var form4 = new FormStart();
-            form4.Show();
+            form4.Show(this);
         }
 
     }

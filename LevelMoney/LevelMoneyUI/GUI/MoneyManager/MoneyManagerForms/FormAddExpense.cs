@@ -22,7 +22,9 @@
 
         private void Form3_Load(object sender, EventArgs e)
         {
-
+            this.Location = this.Owner.Location;
+            this.Left += this.Owner.ClientSize.Width / 2 - this.Width / 2;
+            this.Top += this.Owner.ClientSize.Height / 2 - this.Height / 2;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,22 +75,7 @@
         {
             this.Hide();
             var form4 = new FormStart();
-            form4.Show();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            form4.Show(this);
         }
     }
 }

@@ -188,6 +188,7 @@
             this.Controls.Add(this.StatisticsTextBox);
             this.Name = "FormStatistics";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormStatistics_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -60,5 +60,12 @@ using TeamElderberryProject.Interfaces;
             }
             StatisticsTextBox.AppendText(string.Format("{0}\n",transaction));
         }
+
+        private void FormStatistics_Load(object sender, EventArgs e)
+        {
+            this.Location = this.Owner.Location;
+            this.Left += this.Owner.ClientSize.Width / 2 - this.Width / 2;
+            this.Top += this.Owner.ClientSize.Height / 2 - this.Height / 2;
+        }
     }
 }
